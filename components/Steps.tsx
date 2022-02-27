@@ -27,7 +27,7 @@ function Steps({ step }: Props) {
       {STEP_ITEMS.map((item, index) => (
         <li
           key={item.id}
-          className={cn('step', step >= index && 'step-primary')}
+          className={cn('step', step > index && 'step-primary')}
         >
           {item.text}
         </li>
