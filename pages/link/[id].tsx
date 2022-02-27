@@ -1,5 +1,8 @@
 import { GetServerSideProps } from 'next';
-import ReactMarkdown from 'react-markdown';
+
+import axios from 'axios';
+
+import MarkdownView from 'components/MarkdownView';
 
 type Props = {
   contents: string;
@@ -8,9 +11,7 @@ type Props = {
 function Link({ contents }: Props) {
   return (
     <div className="flex flex-col items-center gap-y-4">
-      <article className="prose">
-        ㄴ <ReactMarkdown children={contents} />
-      </article>
+      <MarkdownView contents={contents} />
       {/* 제출 */}
       <input
         type="text"
@@ -26,9 +27,14 @@ function Link({ contents }: Props) {
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { id } = context.query;
 
+  const {
+    data: { data },
+  } = await axios.get('http://localhost:3000/api/links', { params: { id } });
+
+  const { contents } = data;
   return {
     props: {
-      contents: '# 이것은 퀴즈입니다.\n\n맞춰보세요!',
+      contents,
     },
   };
 };
