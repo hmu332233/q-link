@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import ReactMarkdown from 'react-markdown';
+
+import MarkdownView from 'components/MarkdownView';
 
 type Props = {
   onNextClick: ({
@@ -15,6 +16,7 @@ type Props = {
 
 function Step1Body({ onNextClick }: Props) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const { link } = Object.fromEntries(formData);
     onNextClick({
@@ -58,6 +60,7 @@ function Step2Body({ onNextClick }: Props) {
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const { correct, contents } = Object.fromEntries(formData);
     onNextClick({
@@ -103,11 +106,7 @@ function Step2Body({ onNextClick }: Props) {
           </label>
         </div>
       </form>
-
-      <article className="prose w-full max-w-lg">
-        <ReactMarkdown children={value} />
-      </article>
-
+      <MarkdownView contents={value} />
       <button className="btn btn-wide" type="submit" form="step2">
         다음
       </button>
