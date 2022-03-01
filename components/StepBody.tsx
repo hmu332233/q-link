@@ -83,7 +83,6 @@ function Step2Body({ onNextClick }: Props) {
           placeholder=""
           required
         />
-
         <FormGroup
           label="Quiz Contents"
           feedback="퀴즈를 입력해주세요. (마크다운 지원)"

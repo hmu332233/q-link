@@ -4,10 +4,10 @@ function Index() {
   return (
     <div className="flex flex-col items-center gap-y-8">
       <div>
-        <Link href="/link/new">
+        <Link href="/links/new">
           <button className="btn btn-primary btn-wide">링크 생성하기</button>
         </Link>
-        <Link href="/link/new">
+        <Link href="/links/new">
           <button className="btn btn-outline btn-wide ml-4">예시</button>
         </Link>
       </div>
