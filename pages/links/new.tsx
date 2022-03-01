@@ -27,7 +27,7 @@ function LinkNew() {
           {
             pathname: '/links/complete',
             query: {
-              link: `http://localhost:3000/links/${insertedId}`,
+              link: `${location.origin}/links/${insertedId}`,
             },
           },
           '/link/complete',

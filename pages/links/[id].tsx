@@ -62,7 +62,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   const {
     data: { data },
-  } = await axios.get('http://localhost:3000/api/links', { params: { id } });
+  } = await axios.get(`${process.env.API_URL}/api/links`, { params: { id } });
 
   const { url, contents, correct } = data;
   return {
