@@ -8,3 +8,13 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+
+pre {
+  background-color: unset !important;
+  padding: 0 !important;
+}
+
+p > code {
+  border-radius: 0.3em !important;
+  background: rgba(175,184,193,.2) !important;
+}
