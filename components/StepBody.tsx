@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
+import DefaultInput from 'components/DefaultInput';
 import MarkdownView from 'components/MarkdownView';
+import FormGroup from 'components/FormGroup';
 
 const QUIZ_EXAMPLE = `### 퀴즈 예시
 
@@ -36,21 +38,13 @@ function Step1Body({ onNextClick }: Props) {
   return (
     <>
       <form className="w-full max-w-lg" id="step1" onSubmit={handleSubmit}>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text text-lg font-semibold">Link</span>
-          </label>
-          <input
-            name="url"
-            type="text"
-            placeholder="https://aaaa.com/bbbb"
-            className="input input-bordered w-full"
-            required
-          />
-          <label className="label">
-            <span className="label-text-alt">이동할 링크를 입력해주세요.</span>
-          </label>
-        </div>
+        <DefaultInput
+          label="Link"
+          feedback="이동할 링크를 입력해주세요."
+          name="url"
+          placeholder="https://aaaa.com/bbbb"
+          required
+        />
       </form>
       <button className="btn btn-wide" type="submit" form="step1">
         다음
@@ -82,41 +76,27 @@ function Step2Body({ onNextClick }: Props) {
   return (
     <>
       <form className="w-full max-w-lg" id="step2" onSubmit={handleSubmit}>
-        <div className="form-control w-full max-w-lg">
-          <label className="label">
-            <span className="label-text text-lg font-semibold">Correct</span>
-          </label>
-          <input
-            name="correct"
-            type="text"
-            placeholder=""
-            className="input input-bordered w-full"
-            required
-          />
-          <label className="label">
-            <span className="label-text-alt">정답을 입력해주세요.</span>
-          </label>
-        </div>
-        <div className="form-control w-full max-w-lg">
-          <label className="label">
-            <span className="label-text text-lg font-semibold">
-              Quiz Contents
-            </span>
-          </label>
+        <DefaultInput
+          label="Correct"
+          feedback="정답을 입력해주세요."
+          name="correct"
+          placeholder=""
+          required
+        />
+
+        <FormGroup
+          label="Quiz Contents"
+          feedback="퀴즈를 입력해주세요. (마크다운 지원)"
+        >
           <textarea
             className="textarea w-full h-48 textarea-bordered"
             name="contents"
-            placeholder="## 퀴즈"
+            placeholder=""
             value={value}
             onChange={handleQuizChange}
             required
           />
-          <label className="label">
-            <span className="label-text-alt">
-              퀴즈를 입력해주세요. (마크다운 지원)
-            </span>
-          </label>
-        </div>
+        </FormGroup>
       </form>
       <MarkdownView contents={value} />
       <button className="btn btn-wide" type="submit" form="step2">
