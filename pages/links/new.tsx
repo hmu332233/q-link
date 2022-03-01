@@ -22,9 +22,6 @@ function LinkNew() {
     const newQuizLink = { ...quizLink, ...data };
 
     if (nextStep === LAST_STEP) {
-      console.log('quizLink', newQuizLink);
-      // TODO: api 쏘기
-
       try {
         const {
           data: { data: insertedId },

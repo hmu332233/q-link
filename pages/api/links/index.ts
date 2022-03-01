@@ -27,13 +27,13 @@ export default async function handler(
     case 'POST': {
       const { url, contents, correct } = req.body;
 
-      const document = await insertOne({ url, contents, correct });
+      const insertedId = await insertOne({ url, contents, correct });
 
-      if (!document) {
+      if (!insertedId) {
         return res.status(404).json({ success: false });
       }
 
-      return res.status(200).json({ success: true, data: document });
+      return res.status(200).json({ success: true, data: insertedId });
     }
     default: {
       return res.status(404).json({ success: false });
