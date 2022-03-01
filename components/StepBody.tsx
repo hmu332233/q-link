@@ -56,9 +56,9 @@ function Step1Body({ onNextClick }: Props) {
 function Step2Body({ onNextClick }: Props) {
   const [value, setValue] = useState(QUIZ_EXAMPLE);
 
-  const handleQuizChange = (e) => {
+  const handleQuizChange = (e: React.FormEvent<HTMLTextAreaElement>) => {
     const {
-      target: { value },
+      currentTarget: { value },
     } = e;
     setValue(value);
   };
@@ -105,7 +105,7 @@ function Step2Body({ onNextClick }: Props) {
   );
 }
 
-const StepBody = {
+const StepBody: { [key: string]: (props: Props) => JSX.Element } = {
   Step1: Step1Body,
   Step2: Step2Body,
 };

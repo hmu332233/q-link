@@ -44,7 +44,7 @@ function LinkId({ url, contents, correct }: Props) {
         <DefaultInput
           name="answer"
           placeholder="정답을 입력해주세요."
-          feedback={showFeedback && feedbackMessage}
+          feedback={showFeedback ? feedbackMessage : undefined}
         />
       </form>
       <button className="btn btn-wide" type="submit" form="answer">
