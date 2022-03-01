@@ -9,7 +9,7 @@ const instance = axios.create({
   },
 });
 
-export const findOne = async (id: string) => {
+export const findOne = async (id: string): Promise<QuizLink | null> => {
   const postData = JSON.stringify({
     collection: 'links',
     database: process.env.DB_NAME,
@@ -25,6 +25,38 @@ export const findOne = async (id: string) => {
     } = await instance.post('/action/findOne', postData);
     return document;
   } catch (err) {
+    return null;
+  }
+};
+
+type QuizLinkBody = {
+  url: string;
+  contents: string;
+  correct: string;
+};
+export const insertOne = async ({
+  url,
+  contents,
+  correct,
+}: QuizLinkBody): Promise<string | null> => {
+  const postData = JSON.stringify({
+    collection: 'links',
+    database: process.env.DB_NAME,
+    dataSource: process.env.DB_DATA_SOURCE,
+    document: {
+      url,
+      contents,
+      correct,
+      createdAt: Date.now(),
+    },
+  });
+  try {
+    const {
+      data: { insertedId },
+    } = await instance.post('/action/insertOne', postData);
+    return insertedId;
+  } catch (err) {
+    console.log(err);
     return null;
   }
 };

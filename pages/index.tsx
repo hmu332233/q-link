@@ -1,21 +1,30 @@
+import Link from 'next/link';
+
 function Index() {
   return (
-    <div className="flex flex-col items-center gap-y-4">
+    <div className="flex flex-col items-center gap-y-8">
       <div>
-        <button className="btn btn-secondary btn-wide">링크 생성하기</button>
-        <button className="btn btn-outline btn-wide ml-4">예시</button>
+        <Link href="/link/new">
+          <button className="btn btn-primary btn-wide">링크 생성하기</button>
+        </Link>
+        <Link href="/link/new">
+          <button className="btn btn-outline btn-wide ml-4">예시</button>
+        </Link>
       </div>
 
       <article className="prose">
-        <h3>Quiz Link란?</h3>
+        <h3>Quiz Link는 무엇인가요?</h3>
         <p>
-          Quiz Link란 간단한 링크 공유 서비스로,
+          Quiz Link란 퀴즈의 정답을 맞췄을 때만 링크에 접속 할 수 있도록 해주는
+          간단한 서비스입니다.
           <br />
-          사용자는 퀴즈를 풀고, 정답일 경우에만 본래 링크로 넘어갈 수 있습니다.
-          <br />
-          이벤트, 구인 페이지, 모바일 청접장(?)등등 여러 상황에서 사용해보세요!
+          이벤트, 구인 페이지, 모바일 청접장등 여러 상황에서 사용해보세요!
           <br />이 프로젝트는{' '}
-          <a href="https://www.codecaptcha.io/" target="_blank">
+          <a
+            className="link"
+            href="https://www.codecaptcha.io/"
+            target="_blank"
+          >
             codecaptcha.io
           </a>
           에서 영감을 받았습니다.
@@ -30,7 +39,9 @@ function Index() {
         <p>
           간단한 프로그래밍 문제를 푼 사람만 지원을 할 수 있도록 하기
           <br />
-          내 생일을 알고 있는 사람만 모바일 초대장을 볼 수 있도록 하기
+          생일을 알고 있는 사람만 모바일 초대장을 볼 수 있도록 하기
+          <br />
+          어뷰징성 접근을 막기
           <br />
           등등 간단하지만 다양한 상황에서 활용해볼 수 있습니다.
         </p>
