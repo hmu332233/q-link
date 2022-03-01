@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 
 import Steps from 'components/Steps';
 import StepBody from 'components/StepBody';
+import axios from 'axios';
 
 const LAST_STEP = 3;
 
@@ -16,7 +17,7 @@ function LinkNew() {
   const [step, setStep] = useState(1);
   const [quizLink, setQuizLink] = useState({});
 
-  const handleNextClick = (data: any) => {
+  const handleNextClick = async (data: any) => {
     const nextStep = step + 1;
     const newQuizLink = { ...quizLink, ...data };
 
@@ -24,15 +25,24 @@ function LinkNew() {
       console.log('quizLink', newQuizLink);
       // TODO: api 쏘기
 
-      router.push(
-        {
-          pathname: '/link/complete',
-          query: {
-            link: 'https://test.com/link/alkajslkdjflkajsd',
+      try {
+        const {
+          data: { data: insertedId },
+        } = await axios.post('/api/links', newQuizLink);
+
+        router.push(
+          {
+            pathname: '/links/complete',
+            query: {
+              link: `http://localhost:3000/links/${insertedId}`,
+            },
           },
-        },
-        '/link/complete',
-      );
+          '/link/complete',
+        );
+      } catch (err) {
+        // TOOD: 에러 처리
+        console.error(err);
+      }
 
       return;
     }
