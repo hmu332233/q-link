@@ -4,10 +4,10 @@ function Index() {
   return (
     <div className="flex flex-col items-center gap-y-8">
       <div>
-        <Link href="/links/new">
+        <Link href="/links/new" passHref>
           <button className="btn btn-primary btn-wide">링크 생성하기</button>
         </Link>
-        <Link href="/links/new">
+        <Link href="/links/new" passHref>
           <button className="btn btn-outline btn-wide ml-4">예시</button>
         </Link>
       </div>
@@ -24,6 +24,7 @@ function Index() {
             className="link"
             href="https://www.codecaptcha.io/"
             target="_blank"
+            rel="noreferrer"
           >
             codecaptcha.io
           </a>

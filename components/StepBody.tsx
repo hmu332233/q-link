@@ -105,7 +105,9 @@ function Step2Body({ onNextClick }: Props) {
   );
 }
 
-export default {
+const StepBody = {
   Step1: Step1Body,
   Step2: Step2Body,
 };
+
+export default StepBody;

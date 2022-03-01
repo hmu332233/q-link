@@ -23,12 +23,13 @@ function MarkdownView({ contents }: Props) {
             const [, language] = /language-(\w+)/.exec(className || '') || [];
             return (
               <SyntaxHighlighter
-                children={String(children).replace(/\n$/, '')}
                 style={atomDark}
                 language={language || 'text'}
                 PreTag="div"
                 {...props}
-              />
+              >
+                {String(children).replace(/\n$/, '')}
+              </SyntaxHighlighter>
             );
           },
         }}
