@@ -7,7 +7,7 @@ function Index() {
         <Link href="/links/new" passHref>
           <button className="btn btn-primary flex-1">링크 생성하기</button>
         </Link>
-        <Link href="/links/new" passHref>
+        <Link href="/links/621fa7d75d3d2554169aaab0" passHref>
           <button className="btn btn-outline flex-1 ml-4">예시</button>
         </Link>
       </div>
