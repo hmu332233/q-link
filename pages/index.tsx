@@ -3,12 +3,12 @@ import Link from 'next/link';
 function Index() {
   return (
     <div className="flex flex-col items-center gap-y-8">
-      <div>
+      <div className="flex w-full">
         <Link href="/links/new" passHref>
-          <button className="btn btn-primary btn-wide">링크 생성하기</button>
+          <button className="btn btn-primary flex-1">링크 생성하기</button>
         </Link>
         <Link href="/links/new" passHref>
-          <button className="btn btn-outline btn-wide ml-4">예시</button>
+          <button className="btn btn-outline flex-1 ml-4">예시</button>
         </Link>
       </div>
 
