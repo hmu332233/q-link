@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Seo from 'components/Seo';
 import Header from 'components/Header';
 
 type Props = {
@@ -9,6 +10,7 @@ type Props = {
 function Layout({ children }: Props) {
   return (
     <>
+      <Seo />
       <Header />
       <main>{children}</main>
     </>
