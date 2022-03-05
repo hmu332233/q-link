@@ -11,8 +11,9 @@ declare global {
 const uri = process.env.DB_URL as string;
 
 const options = {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
+  // TODO: 아래 옵션이 필요 없는 건지 확인 필요 - https://docs.mongodb.com/drivers/node/current/whats-new/#mongoclientoptions-interface
+  // useUnifiedTopology: true,
+  // useNewUrlParser: true,
 };
 
 let client;
