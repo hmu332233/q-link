@@ -1,4 +1,6 @@
 // https://docs.atlas.mongodb.com/best-practices-connecting-from-vercel/
+// NOTE
+// 기존에 사용하던 DB API 방식은 77132084ab0524f7df42ca880e83f2df31e7b887에서 지워짐
 
 import { MongoClient, ObjectId as _ObjectId } from 'mongodb';
 
