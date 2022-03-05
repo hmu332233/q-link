@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { findOne, insertOne } from '../../../libs/db';
+import clientPromise, { ObjectId } from '../../../libs/db/client';
 
 type Data = {
   success: boolean;
@@ -12,12 +12,19 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>,
 ) {
+  const client = await clientPromise;
+
   switch (req.method) {
     case 'GET': {
       const { id } = req.query;
 
-      const document = await findOne(id as string);
-
+      const document = await client
+        .db()
+        .collection('links')
+        .findOne(
+          { _id: new ObjectId(id as string) },
+          { projection: { _id: 0 } },
+        );
       if (!document) {
         return res.status(404).json({ success: false });
       }
@@ -27,7 +34,12 @@ export default async function handler(
     case 'POST': {
       const { url, contents, correct } = req.body;
 
-      const insertedId = await insertOne({ url, contents, correct });
+      const { insertedId } = await client.db().collection('links').insertOne({
+        url,
+        contents,
+        correct,
+        createdAt: Date.now(),
+      });
 
       if (!insertedId) {
         return res.status(404).json({ success: false });
