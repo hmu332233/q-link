@@ -51,7 +51,7 @@ function LinkId({ url, contents, correct }: Props) {
         확인
       </button>
       <Link href="/links/new">
-        <a className="link">Quiz Link 직접 만들어보기</a>
+        <a className="link">링크 직접 만들어보기</a>
       </Link>
     </div>
   );
