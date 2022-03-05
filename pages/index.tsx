@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+const demoUrl: string = process.env.NEXT_PUBLIC_DEMO_URL as string;
+
 function Index() {
   return (
     <div className="flex flex-col items-center gap-y-8">
@@ -7,7 +9,7 @@ function Index() {
         <Link href="/links/new">
           <a className="btn btn-primary flex-1">링크 생성하기</a>
         </Link>
-        <Link href="/links/621fa7d75d3d2554169aaab0">
+        <Link href={demoUrl}>
           <a className="btn btn-outline flex-1 ml-4">예시</a>
         </Link>
       </div>
