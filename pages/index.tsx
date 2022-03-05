@@ -12,7 +12,7 @@ function Index() {
         </Link>
       </div>
 
-      <article className="prose">
+      <section className="prose">
         <h3>
           <span className="text-primary">Q.</span>Link는 무엇인가요?
         </h3>
@@ -51,7 +51,7 @@ function Index() {
           <br />
           등등 간단하지만 다양한 상황에서 활용해볼 수 있습니다.
         </p>
-      </article>
+      </section>
     </div>
   );
 }

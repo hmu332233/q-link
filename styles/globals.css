@@ -11,6 +11,12 @@ body {
   padding-right: 20px;
 }
 
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 pre {
   background-color: unset !important;
   padding: 0 !important;
