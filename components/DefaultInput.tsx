@@ -7,15 +7,23 @@ type Props = {
   feedback?: string;
   name: string;
   placeholder: string;
+  type?: string;
   required?: boolean;
 };
 
-function DefaultInput({ label, feedback, name, placeholder, required }: Props) {
+function DefaultInput({
+  label,
+  feedback,
+  name,
+  placeholder,
+  type = 'text',
+  required,
+}: Props) {
   return (
     <FormGroup label={label} feedback={feedback}>
       <input
         className="input input-bordered w-full"
-        type="text"
+        type={type}
         name={name}
         placeholder={placeholder}
         required={required}

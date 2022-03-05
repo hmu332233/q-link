@@ -42,6 +42,7 @@ function Step1Body({ onNextClick }: Props) {
           label="Link"
           feedback="이동할 링크를 입력해주세요."
           name="url"
+          type="url"
           placeholder="https://aaaa.com/bbbb"
           required
         />
