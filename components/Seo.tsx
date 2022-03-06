@@ -19,7 +19,7 @@ function Seo({}: Props) {
         content="퀴즈로 접근하는 링크, Q.Link입니다!"
       />
       {/* <meta property="og:image" content=""/> */}
-      <meta property="og:url" content="https://q-link.vercel.app" />
+      <meta property="og:url" content="https://q-link.minung.dev" />
     </Head>
   );
 }

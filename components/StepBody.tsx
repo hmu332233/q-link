@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import cn from 'classnames';
+
 import DefaultInput from 'components/DefaultInput';
 import MarkdownView from 'components/MarkdownView';
 import FormGroup from 'components/FormGroup';
@@ -55,6 +57,7 @@ function Step1Body({ onNextClick }: Props) {
 }
 
 function Step2Body({ onNextClick }: Props) {
+  const [isLoading, setIsLoading] = useState(false);
   const [value, setValue] = useState(QUIZ_EXAMPLE);
 
   const handleQuizChange = (e: React.FormEvent<HTMLTextAreaElement>) => {
@@ -72,6 +75,7 @@ function Step2Body({ onNextClick }: Props) {
       correct: correct as string,
       contents: contents as string,
     });
+    setIsLoading(true);
   };
 
   return (
@@ -99,7 +103,11 @@ function Step2Body({ onNextClick }: Props) {
         </FormGroup>
       </form>
       <MarkdownView contents={value} />
-      <button className="btn btn-wide" type="submit" form="step2">
+      <button
+        className={cn('btn btn-wide', isLoading && 'loading')}
+        type="submit"
+        form="step2"
+      >
         다음
       </button>
     </>
