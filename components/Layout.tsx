@@ -6,13 +6,14 @@ import Footer from 'components/Footer';
 
 type Props = {
   children: JSX.Element;
+  hideHeader: boolean;
 };
 
-function Layout({ children }: Props) {
+function Layout({ children, hideHeader }: Props) {
   return (
     <>
       <Seo />
-      <Header />
+      {hideHeader || <Header />}
       <main className="mb-auto">{children}</main>
       <Footer />
     </>

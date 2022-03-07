@@ -19,8 +19,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
 
+  const isRoot = router.pathname === '/';
   return (
-    <Layout>
+    <Layout hideHeader={isRoot}>
       <Component {...pageProps} />
     </Layout>
   );

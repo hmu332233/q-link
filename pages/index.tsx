@@ -5,15 +5,35 @@ const demoUrl: string = process.env.NEXT_PUBLIC_DEMO_URL as string;
 function Index() {
   return (
     <div className="flex flex-col items-center gap-y-8">
-      <div className="flex w-full">
-        <Link href="/links/new">
-          <a className="btn btn-primary flex-1">링크 생성하기</a>
-        </Link>
-        <Link href={demoUrl}>
-          <a className="btn btn-outline flex-1 ml-4">예시</a>
-        </Link>
+      <div className="hero h-96 min-h-screen">
+        <div className="hero-content w-full text-center">
+          <div className="w-full">
+            <h1 className="text-4xl font-bold text-base-content ">
+              <Link href="/">
+                <a>
+                  <span className="text-primary">Q.</span>Link
+                </a>
+              </Link>
+            </h1>
+            <p className="py-6">
+              퀴즈로 접근하는 링크, Q.Link!
+              <br />
+              여러분의 링크를 간단한 퀴즈 뒤에 숨겨보세요
+            </p>
+            <div className="flex w-full">
+              <Link href="/links/new">
+                <a className="btn btn-primary flex-1">Q.Link 생성하기</a>
+              </Link>
+              <Link href={'/links/6226353afb600cbd56afa264'}>
+                <a className="btn flex-1 ml-4">Q.Link란?</a>
+              </Link>
+              <Link href={demoUrl}>
+                <a className="btn btn-outline flex-1 ml-4">예시</a>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-
       <section className="prose">
         <h3>
           <span className="text-primary">Q.</span>Link는 무엇인가요?
@@ -49,7 +69,7 @@ function Index() {
           <br />
           생일을 알고 있는 사람만 모바일 초대장을 볼 수 있도록 하기
           <br />
-          비밀번호를 입력한 사람만 특정 API를 호출되도록 하기
+          비밀번호를 입력한 사람만 특정 API가 호출되도록 하기
           <br />
           등등 간단하지만 다양한 상황에서 활용해볼 수 있습니다.
         </p>
