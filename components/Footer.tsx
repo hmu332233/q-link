@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="flex mt-auto py-4 mt-8 border-t text-sm">
+    <footer className="flex mt-auto py-4 mt-16 border-t text-sm">
       <div className="">
         © 2022{' '}
         <a
