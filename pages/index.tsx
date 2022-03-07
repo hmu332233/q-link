@@ -1,11 +1,12 @@
 import Link from 'next/link';
 
+const introUrl: string = process.env.NEXT_PUBLIC_INTRO_URL as string;
 const demoUrl: string = process.env.NEXT_PUBLIC_DEMO_URL as string;
 
 function Index() {
   return (
     <div className="flex flex-col items-center gap-y-8">
-      <div className="hero h-96 min-h-screen">
+      <div className="hero min-h-screen">
         <div className="hero-content w-full text-center">
           <div className="w-full">
             <h1 className="text-4xl font-bold text-base-content ">
@@ -24,7 +25,7 @@ function Index() {
               <Link href="/links/new">
                 <a className="btn btn-primary flex-1">Q.Link 생성하기</a>
               </Link>
-              <Link href={'/links/6226353afb600cbd56afa264'}>
+              <Link href={introUrl}>
                 <a className="btn flex-1 ml-4">Q.Link란?</a>
               </Link>
               <Link href={demoUrl}>
