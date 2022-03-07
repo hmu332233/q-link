@@ -1,3 +1,4 @@
+import LoadableButton from 'components/LoadableButton';
 import Link from 'next/link';
 
 const introUrl: string = process.env.NEXT_PUBLIC_INTRO_URL as string;
@@ -25,11 +26,15 @@ function Index() {
               <Link href="/links/new">
                 <a className="btn btn-primary flex-1">Q.Link 생성하기</a>
               </Link>
-              <Link href={introUrl}>
-                <a className="btn flex-1 ml-4">Q.Link란?</a>
+              <Link href={introUrl} passHref>
+                <LoadableButton className="flex-1 ml-4">
+                  Q.Link란?
+                </LoadableButton>
               </Link>
-              <Link href={demoUrl}>
-                <a className="btn btn-outline flex-1 ml-4">예시</a>
+              <Link href={demoUrl} passHref>
+                <LoadableButton className="btn-outline flex-1 ml-4">
+                  예시
+                </LoadableButton>
               </Link>
             </div>
           </div>

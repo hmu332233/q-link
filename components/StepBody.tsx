@@ -5,6 +5,7 @@ import cn from 'classnames';
 import DefaultInput from 'components/DefaultInput';
 import MarkdownView from 'components/MarkdownView';
 import FormGroup from 'components/FormGroup';
+import LoadableButton from './LoadableButton';
 
 const QUIZ_EXAMPLE = `### 퀴즈 예시
 
@@ -49,9 +50,9 @@ function Step1Body({ onNextClick }: Props) {
           required
         />
       </form>
-      <button className="btn btn-wide" type="submit" form="step1">
+      <LoadableButton className="btn-wide" type="submit" form="step1">
         다음
-      </button>
+      </LoadableButton>
     </>
   );
 }
@@ -103,13 +104,9 @@ function Step2Body({ onNextClick }: Props) {
         </FormGroup>
       </form>
       <MarkdownView contents={value} />
-      <button
-        className={cn('btn btn-wide', isLoading && 'loading')}
-        type="submit"
-        form="step2"
-      >
+      <LoadableButton className="btn-wide" type="submit" form="step2">
         다음
-      </button>
+      </LoadableButton>
     </>
   );
 }
