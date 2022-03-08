@@ -1,7 +1,6 @@
 import LoadableButton from 'components/LoadableButton';
 import Link from 'next/link';
 
-const introUrl: string = process.env.NEXT_PUBLIC_INTRO_URL as string;
 const demoUrl: string = process.env.NEXT_PUBLIC_DEMO_URL as string;
 
 function Index() {
