@@ -27,6 +27,11 @@ p > code {
   background: rgba(175, 184, 193, 0.2) !important;
 }
 
+.work-keep-all {
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+
 .animation {
   animation-duration: 1s;
   animation-fill-mode: both;
