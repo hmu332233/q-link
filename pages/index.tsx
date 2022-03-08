@@ -26,10 +26,8 @@ function Index() {
               <Link href="/links/new">
                 <a className="btn btn-primary flex-1">Q.Link 생성하기</a>
               </Link>
-              <Link href={introUrl} passHref>
-                <LoadableButton className="flex-1 ml-3">
-                  Q.Link란?
-                </LoadableButton>
+              <Link href="/intro">
+                <a className="btn flex-1 ml-3">Q.Link란?</a>
               </Link>
               <Link href={demoUrl} passHref>
                 <LoadableButton className="btn-outline flex-1 ml-3">
