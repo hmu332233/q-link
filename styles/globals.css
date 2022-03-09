@@ -22,6 +22,10 @@ pre {
   padding: 0 !important;
 }
 
+pre > div {
+  border-radius: 0.5em !important;
+}
+
 p > code {
   border-radius: 0.3em !important;
   background: rgba(175, 184, 193, 0.2) !important;
