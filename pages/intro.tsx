@@ -6,8 +6,10 @@ const correct = '라';
 const url = 'https://q-link.minung.dev';
 const contents = `### Q.Link는 무엇인가요?
 
-Q.Link란 퀴즈로 접근하는 링크라는 의미로 퀴즈의 정답을 맞췄을 때만 링크에 접속 할 수 있도록 해주는 간단한 서비스입니다. 이벤트, 구인 페이지, 모바일 청접장등 여러 상황에서 사용해보세요!  
-이 프로젝트는 [codecaptcha.io](https://www.codecaptcha.io/)에서 영감을 받았습니다.
+Q.Link란 퀴즈로 접근하는 링크라는 의미로  
+링크 앞에 간단한 퀴즈를 추가하여 정답을 맞췄을 때만 링크에 접속 할 수 있도록 해주는 간단한 서비스입니다. 이벤트, 구인 페이지, 모바일 청접장등 여러 상황에서 사용해볼 수 있습니다.  
+
+이 프로젝트는 [codecaptcha.io](https://codecaptcha.io)에서 영감을 받았습니다.
 
 ### 어떻게 사용하나요?
 
