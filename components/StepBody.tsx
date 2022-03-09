@@ -50,9 +50,9 @@ function Step1Body({ onNextClick }: Props) {
           required
         />
       </form>
-      <LoadableButton className="btn-wide" type="submit" form="step1">
+      <button className="btn btn-wide" type="submit" form="step1">
         다음
-      </LoadableButton>
+      </button>
     </>
   );
 }
