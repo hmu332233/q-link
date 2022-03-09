@@ -24,6 +24,7 @@ pre {
 
 pre > div {
   border-radius: 0.5em !important;
+  background: rgb(24, 24, 47) !important;
 }
 
 p > code {
