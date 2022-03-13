@@ -2,19 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+.container {
   min-width: 360px;
   max-width: 576px;
   width: 100%;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-}
-
-#__next {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 pre {

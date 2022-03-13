@@ -13,9 +13,11 @@ function Layout({ children, hideHeader }: Props) {
   return (
     <>
       <Seo />
-      {hideHeader || <Header />}
-      <main className="mb-auto">{children}</main>
-      <Footer />
+      <div className="flex flex-col min-h-screen">
+        {hideHeader || <Header />}
+        <main className="container grow">{children}</main>
+        <Footer />
+      </div>
     </>
   );
 }

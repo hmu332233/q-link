@@ -5,7 +5,7 @@ type Props = {};
 
 function Header({}: Props) {
   return (
-    <header className="text-center py-4">
+    <header className="container text-center py-4">
       <h1 className="text-4xl font-bold text-base-content ">
         <Link href="/">
           <a>
