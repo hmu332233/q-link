@@ -3,7 +3,7 @@
 퀴즈로 접근하는 링크, Q.Link  
 여러분의 링크를 간단한 퀴즈 뒤에 숨겨보세요!
 
-링크: https://q-link.minung.dev
+링크: https://q-link.minung.dev  
 예시: https://q-link.minung.dev/links/6223a7b4584a605e6ddead7e
 
 ### Q.Link는 무엇인가요?
