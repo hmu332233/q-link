@@ -4,7 +4,7 @@ import FormGroup from 'components/FormGroup';
 
 type Props = {
   label?: string;
-  feedback?: string;
+  feedback?: React.ReactNode;
   name: string;
   placeholder: string;
   type?: string;

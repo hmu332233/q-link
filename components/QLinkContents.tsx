@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import DefaultInput from 'components/DefaultInput';
 import MarkdownView from 'components/MarkdownView';
+import FeedbackMessage from 'components/FeedbackMessage';
 
 type Props = {
   url: string;
@@ -27,14 +28,12 @@ function QLinkContents({ url, contents, correct }: Props) {
   useEffect(() => {
     if (!isCorrect) return;
 
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       location.href = url;
-    }, 5000);
-  }, [isCorrect, url]);
+    }, 4500);
 
-  const feedbackMessage = isCorrect
-    ? '정답입니다! 5초 뒤에 링크로 이동합니다'
-    : '오답입니다.';
+    return () => clearTimeout(timeoutId);
+  }, [isCorrect, url]);
 
   return (
     <div className="flex flex-col items-center gap-y-4">
@@ -43,7 +42,9 @@ function QLinkContents({ url, contents, correct }: Props) {
         <DefaultInput
           name="answer"
           placeholder="정답을 입력해주세요."
-          feedback={showFeedback ? feedbackMessage : undefined}
+          feedback={
+            showFeedback ? <FeedbackMessage isCorrect={isCorrect} /> : undefined
+          }
         />
       </form>
       <button className="btn btn-wide" type="submit" form="answer">
