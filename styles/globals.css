@@ -31,12 +31,9 @@ p > code {
   word-break: keep-all;
 }
 
-.animation {
+.animate-head-shake {
   animation-duration: 1s;
   animation-fill-mode: both;
-}
-
-.animation.headShake {
   animation-name: headShake;
   animation-timing-function: ease-in-out;
 }

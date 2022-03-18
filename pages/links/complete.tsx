@@ -24,8 +24,10 @@ function LinkComplete() {
       </Link>
       <div className="indicator">
         {copied && (
-          <span className="indicator-item badge badge-secondary animation headShake">
-            복사됨
+          <span className="indicator-item">
+            <span className="badge badge-secondary animate-head-shake">
+              복사됨
+            </span>
           </span>
         )}
         <button className="btn btn-wide" onClick={handleCopyClick}>
