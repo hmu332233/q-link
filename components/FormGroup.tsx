@@ -2,8 +2,8 @@ import React from 'react';
 
 type Props = {
   label?: string;
-  feedback?: string;
-  children: JSX.Element;
+  feedback?: React.ReactNode;
+  children: React.ReactNode;
 };
 
 function FormGroup({ children, label, feedback }: Props) {
