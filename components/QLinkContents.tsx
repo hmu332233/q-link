@@ -5,6 +5,7 @@ import Link from 'next/link';
 import DefaultInput from 'components/DefaultInput';
 import MarkdownView from 'components/MarkdownView';
 import FeedbackMessage from 'components/FeedbackMessage';
+import ShareButton from 'components/ShareButton';
 
 type Props = {
   url: string;
@@ -50,6 +51,7 @@ function QLinkContents({ url, contents, correct }: Props) {
       <button className="btn btn-wide" type="submit" form="answer">
         확인
       </button>
+      <ShareButton />
       <Link href="/links/new">
         <a className="link">링크 직접 만들어보기</a>
       </Link>
