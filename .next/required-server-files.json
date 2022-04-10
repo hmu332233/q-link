@@ -78,7 +78,7 @@
     },
     "configFileName": "next.config.js"
   },
-  "appDir": "/workspace/quiz_short_url",
+  "appDir": "/Users/mark/Documents/my/q-link",
   "files": [
     ".next/routes-manifest.json",
     ".next/server/pages-manifest.json",

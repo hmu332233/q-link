@@ -65,8 +65,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var components_DefaultInput__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1197);
 /* harmony import */ var components_MarkdownView__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6402);
 /* harmony import */ var components_FeedbackMessage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4385);
+/* harmony import */ var components_ShareButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9306);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([components_MarkdownView__WEBPACK_IMPORTED_MODULE_4__]);
 components_MarkdownView__WEBPACK_IMPORTED_MODULE_4__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
 
 
 
@@ -118,6 +120,7 @@ function QLinkContents({ url , contents , correct  }) {
                 form: "answer",
                 children: "확인"
             }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(components_ShareButton__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {}),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(next_link__WEBPACK_IMPORTED_MODULE_2__["default"], {
                 href: "/links/new",
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
@@ -132,6 +135,44 @@ function QLinkContents({ url , contents , correct  }) {
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 9306:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function ShareButton({}) {
+    const handleClick = async ()=>{
+        const isAvailable = typeof navigator.share !== 'undefined';
+        const url = location.href;
+        if (isAvailable) {
+            await navigator.share({
+                title: 'Q.Link',
+                url
+            });
+        } else {
+            // share api 지원하지 않을시 clipboard 복사로 대체
+            await navigator.clipboard.writeText(url);
+            alert('링크가 복사되었습니다!');
+        }
+    };
+    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+        className: "btn btn-outline btn-wide",
+        onClick: handleClick,
+        children: "공유"
+    }));
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ShareButton);
+
 
 /***/ })
 
