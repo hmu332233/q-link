@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 .container {
   min-width: 360px;
   max-width: 576px;
