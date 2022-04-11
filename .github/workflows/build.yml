@@ -5,8 +5,8 @@ name: Q.Link Build
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ main ]
+#   push:
+#     branches: [ main ]
 
 jobs:
   build:
@@ -50,3 +50,12 @@ jobs:
       run: yarn build
       env:
         NEXT_PUBLIC_DEMO_URL: ${{ secrets.NEXT_PUBLIC_DEMO_URL }}
+        
+    - uses: EndBug/add-and-commit@v9
+      with:
+        add: '.next'
+        author_name: bot
+        author_email: bot@minung.dev
+        commit: --force
+        new_branch: product
+        pathspec_error_handling: exitImmediately
