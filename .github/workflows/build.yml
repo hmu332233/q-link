@@ -48,3 +48,5 @@ jobs:
     - name: Build
       if: steps.cache_dist.outputs.cache-hit != 'true'
       run: yarn build
+      env:
+        NEXT_PUBLIC_DEMO_URL: ${{ secrets.NEXT_PUBLIC_DEMO_URL }}
