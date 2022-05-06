@@ -1,0 +1,58 @@
+{
+  "version": 3,
+  "pages404": true,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [
+    {
+      "page": "/links/[id]",
+      "regex": "^/links/([^/]+?)(?:/)?$",
+      "routeKeys": { "id": "id" },
+      "namedRegex": "^/links/(?<id>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/intro",
+      "regex": "^/intro(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/intro(?:/)?$"
+    },
+    {
+      "page": "/links/complete",
+      "regex": "^/links/complete(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/links/complete(?:/)?$"
+    },
+    {
+      "page": "/links/new",
+      "regex": "^/links/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/links/new(?:/)?$"
+    }
+  ],
+  "dataRoutes": [
+    {
+      "page": "/links/[id]",
+      "routeKeys": { "id": "id" },
+      "dataRouteRegex": "^/_next/data/0nVu2po5kekrmMRZ0S9Ak/links/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/0nVu2po5kekrmMRZ0S9Ak/links/(?<id>[^/]+?)\\.json$"
+    }
+  ],
+  "rewrites": []
+}
