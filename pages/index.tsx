@@ -1,9 +1,14 @@
+import type { GetServerSideProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
+
 import LoadableButton from 'components/LoadableButton';
 import Link from 'next/link';
 
 const demoUrl: string = process.env.NEXT_PUBLIC_DEMO_URL as string;
 
 function Index() {
+  const { t } = useTranslation('main');
   return (
     <div className="flex flex-col items-center gap-y-8">
       <div className="hero min-h-screen">
@@ -16,21 +21,17 @@ function Index() {
                 </a>
               </Link>
             </h1>
-            <p className="py-6 work-keep-all">
-              퀴즈로 접근하는 링크, Q.Link!
-              <br />
-              여러분의 링크를 간단한 퀴즈 뒤에 숨겨보세요
-            </p>
+            <p className="py-6 whitespace-pre-line">{t('description')}</p>
             <div className="flex w-full">
               <Link href="/links/new">
-                <a className="btn btn-primary flex-1">Q.Link 생성하기</a>
+                <a className="btn btn-primary flex-1">{t('button.create')}</a>
               </Link>
               <Link href="/intro">
-                <a className="btn flex-1 ml-3">Q.Link란?</a>
+                <a className="btn flex-1 ml-3">{t('button.what')}</a>
               </Link>
               <Link href={demoUrl} passHref>
                 <LoadableButton className="btn-outline flex-1 ml-3">
-                  예시
+                  {t('button.demo')}
                 </LoadableButton>
               </Link>
             </div>
@@ -40,5 +41,15 @@ function Index() {
     </div>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async ({
+  locale = 'ko',
+}) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['main'])),
+    },
+  };
+};
 
 export default Index;
