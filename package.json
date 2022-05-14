@@ -18,6 +18,7 @@
     "mongodb": "^4.4.1",
     "next": "12.1.0",
     "next-connect": "^0.12.2",
+    "next-i18next": "^11.0.0",
     "patch-package": "^6.4.7",
     "postinstall-postinstall": "^2.1.0",
     "react": "17.0.2",
