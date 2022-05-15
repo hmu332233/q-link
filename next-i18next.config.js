@@ -7,5 +7,6 @@ module.exports = {
     defaultLocale: 'ko',
     locales: ['ko', 'en'],
     localePath: path.resolve('./public/locales'),
+    localeExtension: 'js',
   },
 };
