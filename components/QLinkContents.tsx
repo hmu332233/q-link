@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+
+import { useTranslation } from 'next-i18next';
 
 import DefaultInput from 'components/DefaultInput';
 import MarkdownView from 'components/MarkdownView';
@@ -14,6 +15,8 @@ type Props = {
 };
 
 function QLinkContents({ url, contents, correct }: Props) {
+  const { t } = useTranslation();
+
   const [isCorrect, setIsCorrect] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
 
@@ -42,18 +45,18 @@ function QLinkContents({ url, contents, correct }: Props) {
       <form className="w-full max-w-lg" id="answer" onSubmit={handleSubmit}>
         <DefaultInput
           name="answer"
-          placeholder="정답을 입력해주세요."
+          placeholder={t('links:contents.answerPlaceholder')}
           feedback={
             showFeedback ? <FeedbackMessage isCorrect={isCorrect} /> : undefined
           }
         />
       </form>
       <button className="btn btn-wide" type="submit" form="answer">
-        확인
+        {t('common:submit')}
       </button>
-      <ShareButton />
+      <ShareButton outline />
       <Link href="/links/new">
-        <a className="link">링크 직접 만들어보기</a>
+        <a className="link">{t('links:contents.createLink')}</a>
       </Link>
     </div>
   );

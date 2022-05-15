@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { Trans, useTranslation } from 'next-i18next';
+
 import cn from 'classnames';
 
 import DefaultInput from 'components/DefaultInput';
@@ -29,6 +31,7 @@ type Props = {
 };
 
 function Step1Body({ onNextClick }: Props) {
+  const { t } = useTranslation();
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -44,7 +47,7 @@ function Step1Body({ onNextClick }: Props) {
         <DefaultInput
           label="Link"
           feedback={
-            <span>
+            <Trans i18nKey="links:stepBody.step1.feedback">
               정답을 맞혔을 때 이동할 링크를 입력해 주세요.
               <br />
               이동할 링크가 없다면{' '}
@@ -57,7 +60,7 @@ function Step1Body({ onNextClick }: Props) {
                 celebration.minung.dev
               </a>
               를 활용해보세요.
-            </span>
+            </Trans>
           }
           name="url"
           type="url"
@@ -66,15 +69,19 @@ function Step1Body({ onNextClick }: Props) {
         />
       </form>
       <button className="btn btn-wide" type="submit" form="step1">
-        다음
+        {t('common:next')}
       </button>
     </>
   );
 }
 
 function Step2Body({ onNextClick }: Props) {
+  const { t } = useTranslation();
+
   const [isLoading, setIsLoading] = useState(false);
-  const [value, setValue] = useState(QUIZ_EXAMPLE);
+  const [value, setValue] = useState(
+    t('links:stepBody.step2.example') as string,
+  );
 
   const handleQuizChange = (e: React.FormEvent<HTMLTextAreaElement>) => {
     const {
@@ -99,14 +106,14 @@ function Step2Body({ onNextClick }: Props) {
       <form className="w-full max-w-lg" id="step2" onSubmit={handleSubmit}>
         <DefaultInput
           label="Correct"
-          feedback="정답을 입력해주세요."
+          feedback={t('links:stepBody.step2.feedback1')}
           name="correct"
           placeholder=""
           required
         />
         <FormGroup
           label="Quiz Contents"
-          feedback="퀴즈를 입력해주세요. (마크다운 지원)"
+          feedback={t('links:stepBody.step2.feedback2')}
         >
           <textarea
             className="textarea w-full h-48 textarea-bordered"
@@ -120,7 +127,7 @@ function Step2Body({ onNextClick }: Props) {
       </form>
       <MarkdownView contents={value} />
       <LoadableButton className="btn-wide" type="submit" form="step2">
-        다음
+        {t('common:next')}
       </LoadableButton>
     </>
   );

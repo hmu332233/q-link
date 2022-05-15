@@ -1,19 +1,19 @@
-import React from 'react';
+import { useTranslation } from 'next-i18next';
 
 import cn from 'classnames';
 
 const STEP_ITEMS = [
   {
     id: 'link',
-    text: '링크 입력',
+    textId: 'steps.one',
   },
   {
     id: 'quiz',
-    text: '문제 생성',
+    textId: 'steps.two',
   },
   {
     id: 'complete',
-    text: '완료',
+    textId: 'steps.three',
   },
 ] as const;
 
@@ -22,6 +22,8 @@ type Props = {
 };
 
 function Steps({ step }: Props) {
+  const { t } = useTranslation('links');
+
   return (
     <ul className="steps w-96">
       {STEP_ITEMS.map((item, index) => (
@@ -29,7 +31,7 @@ function Steps({ step }: Props) {
           key={item.id}
           className={cn('step', step > index && 'step-primary')}
         >
-          {item.text}
+          {t(item.textId)}
         </li>
       ))}
     </ul>

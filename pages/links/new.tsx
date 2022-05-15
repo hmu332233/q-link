@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
+import type { GetServerSideProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import axios from 'axios';
 import Steps from 'components/Steps';
 import StepBody from 'components/StepBody';
@@ -53,5 +56,15 @@ function LinkNew() {
     </div>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async ({
+  locale = 'ko',
+}) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'links'])),
+    },
+  };
+};
 
 export default LinkNew;

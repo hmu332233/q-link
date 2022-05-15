@@ -1,6 +1,8 @@
 import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import axios from 'axios';
 
 import QLinkContents from 'components/QLinkContents';
@@ -23,8 +25,11 @@ function LinkId({ id, url, contents, correct }: Props) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { id } = context.query;
+export const getServerSideProps: GetServerSideProps = async ({
+  query,
+  locale = 'ko',
+}) => {
+  const { id } = query;
 
   const {
     data: { data },
@@ -33,6 +38,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const { url, contents, correct } = data;
   return {
     props: {
+      ...(await serverSideTranslations(locale, ['common', 'links'])),
       id,
       url,
       contents,
