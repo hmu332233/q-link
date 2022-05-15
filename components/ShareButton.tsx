@@ -1,8 +1,14 @@
-import React from 'react';
+import { useTranslation } from 'next-i18next';
 
-type Props = {};
+import cn from 'classnames';
 
-function ShareButton({}: Props) {
+type Props = {
+  outline?: boolean;
+};
+
+function ShareButton({ outline }: Props) {
+  const { t } = useTranslation();
+
   const handleClick = async () => {
     const isAvailable = typeof navigator.share !== 'undefined';
     const url = location.href;
@@ -15,13 +21,16 @@ function ShareButton({}: Props) {
     } else {
       // share api 지원하지 않을시 clipboard 복사로 대체
       await navigator.clipboard.writeText(url);
-      alert('링크가 복사되었습니다!');
+      alert(t('common:copied'));
     }
   };
 
   return (
-    <button className="btn btn-outline btn-wide" onClick={handleClick}>
-      공유
+    <button
+      className={cn('btn btn-wide', outline && 'btn-outline')}
+      onClick={handleClick}
+    >
+      {t('common:share')}
     </button>
   );
 }
