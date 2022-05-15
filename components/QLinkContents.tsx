@@ -45,7 +45,7 @@ function QLinkContents({ url, contents, correct }: Props) {
       <form className="w-full max-w-lg" id="answer" onSubmit={handleSubmit}>
         <DefaultInput
           name="answer"
-          placeholder={t('links:contents.answerPlaceholder')}
+          placeholder={t('common:contents.answerPlaceholder')}
           feedback={
             showFeedback ? <FeedbackMessage isCorrect={isCorrect} /> : undefined
           }
@@ -56,7 +56,7 @@ function QLinkContents({ url, contents, correct }: Props) {
       </button>
       <ShareButton outline />
       <Link href="/links/new">
-        <a className="link">{t('links:contents.createLink')}</a>
+        <a className="link">{t('common:contents.createLink')}</a>
       </Link>
     </div>
   );
