@@ -2,21 +2,10 @@ import React, { useState } from 'react';
 
 import { Trans, useTranslation } from 'next-i18next';
 
-import cn from 'classnames';
-
 import DefaultInput from 'components/DefaultInput';
 import MarkdownView from 'components/MarkdownView';
 import FormGroup from 'components/FormGroup';
 import LoadableButton from './LoadableButton';
-
-const QUIZ_EXAMPLE = `### 퀴즈 예시
-
-마크다운 문법을 자유롭게 사용 가능합니다.
-
-\`\`\`
-1 + 2 + 3 + 4 = ?
-\`\`\`
-`;
 
 type Props = {
   onNextClick: ({

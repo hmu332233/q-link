@@ -22,7 +22,7 @@ module.exports = {
 
   ### Example
 
-  The following is an example of the actual [Q.LINK] (https://q-link.minung.dev). 😀😀  
+  The following is an example of the actual [Q.LINK](https://q-link.minung.dev). 😀😀  
   Q.Link will help you take the quiz and help the person who answers correctly go to the link you have specified, as shown in the example.
 
   \`\`\`
