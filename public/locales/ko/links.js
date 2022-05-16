@@ -11,7 +11,7 @@ module.exports = {
   stepBody: {
     step1: {
       feedback1:
-        '정답을 맞혔을 때 이동할 링크를 입력해 주세요.<br />이동할 링크가 없다면 <3 className="link" href="https://celebration.minung.dev" target="_blank" rel="noreferrer">celebration.minung.dev</3>를 활용해보세요.',
+        '정답을 맞혔을 때 이동할 링크를 입력해 주세요.<br />이동할 링크가 없다면 <4 className="link" href="https://celebration.minung.dev" target="_blank" rel="noreferrer">celebration.minung.dev</4>를 활용해보세요.',
     },
     step2: {
       feedback1: '정답을 입력해주세요.',

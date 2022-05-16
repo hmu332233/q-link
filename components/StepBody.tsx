@@ -36,7 +36,7 @@ function Step1Body({ onNextClick }: Props) {
         <DefaultInput
           label="Link"
           feedback={
-            <Trans i18nKey="links:stepBody.step1.feedback">
+            <Trans i18nKey="links:stepBody.step1.feedback1">
               정답을 맞혔을 때 이동할 링크를 입력해 주세요.
               <br />
               이동할 링크가 없다면{' '}
