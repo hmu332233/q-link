@@ -3,10 +3,6 @@ module.exports = {
     correct: '정답입니다! 5초 뒤에 링크로 이동합니다.',
     fail: '오답입니다.',
   },
-  contents: {
-    answerPlaceholder: '정답을 입력해주세요.',
-    createLink: '링크 직접 만들어보기',
-  },
   steps: {
     one: '링크 입력',
     two: '문제 생성',

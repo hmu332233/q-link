@@ -6,7 +6,6 @@ import { useTranslation } from 'next-i18next';
 
 import QLinkContents from 'components/QLinkContents';
 
-const correct = '라';
 const url = 'https://q-link.minung.dev';
 
 function LinkIntro() {
@@ -16,7 +15,11 @@ function LinkIntro() {
       <Head>
         <title>Q.Link - intro</title>
       </Head>
-      <QLinkContents url={url} contents={t('contents')} correct={correct} />
+      <QLinkContents
+        url={url}
+        contents={t('contents')}
+        correct={t('correct')}
+      />
     </>
   );
 }

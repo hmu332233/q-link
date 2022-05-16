@@ -1,34 +1,35 @@
 module.exports = {
-  contents: `### Q.Link는 무엇인가요?
+  contents: `### What's Q.Link?
 
-  Q.Link란 퀴즈로 접근하는 링크라는 의미로  
-  링크 앞에 간단한 퀴즈를 추가하여 정답을 맞췄을 때만 링크에 접속 할 수 있도록 해주는 간단한 서비스입니다. 이벤트, 구인 페이지, 모바일 청접장등 여러 상황에서 사용해볼 수 있습니다.  
+  "Hide your link behind a simple quiz" is the best expression for Q.Link.  
+  It is a simple service that adds a quiz ahead the link so that users can access the link only when the answer is correct. You can use it in many situations, including events, job offers, and mobile invitations.  
 
-  이 프로젝트는 [codecaptcha.io](https://codecaptcha.io)에서 영감을 받았습니다.
+  The project was inspired by [codecaptcha.io](https://codecaptcha.io).
 
-  ### 어떻게 사용하나요?
+  ### How to use?
 
-  [Q.Link 생성하기](/links/new)를 통해 이동하게될 링크와 퀴즈 내용, 정답 입력하면 Q.Link가 생성됩니다.
-  정답을 맞춘 사람만이 링크로 접근할 수 있게 됩니다.
+  On Page [Create Q.Link](/links/new), type the link you want to move, the quiz content, and the correct answer to create a Q.Link.  
+  Only those who have answered correctly will be able to go to the link.
 
-  ### 어떤 상황에서 사용하나요?
+  ### When to use?
 
-  보안적인 요소보다는 재미 요소에 중점을 두고 여러 상황에서 활용해볼 수 있습니다.
+  You can use it in many situations, focusing on fun rather than security.
 
-  - 간단한 퀴즈를 맞춘 참가자들이 회사 지원 페이지를 들어올 수 있도록 하기
-  - 생일을 알고 있는 사람만 모바일 초대장을 볼 수 있도록 하기
+  - Allow only those who have taken simple quizzes to enter the company' jobs page
+  - Allow only those who know your birthday to see your mobile invitation
 
   ---
 
-  ### 예시
+  ### Example
 
-  다음은 실제 [Q.Link](https://q-link.minung.dev)의 예시입니다. 😀😀  
-  Q.Link는 예시와 같이 퀴즈를 내고 정답을 맞춘 사람이 지정해둔 링크로 이동할 수 있도록 도와줍니다.
+  The following is an example of the actual [Q.LINK] (https://q-link.minung.dev). 😀😀  
+  Q.Link will help you take the quiz and help the person who answers correctly go to the link you have specified, as shown in the example.
 
   \`\`\`
-  Q. [?]에 들어갈 것은?
+  Q. What will go into [?]?
 
-  가나다[?]마
+  ABC[?]E
   \`\`\`
-  정답을 맞췄을 경우에는 \`https://q-link.minung.dev\`로 이동합니다.`,
+  If you are correct, go to \`https://q-link.minung.dev\``,
+  correct: 'D',
 };
