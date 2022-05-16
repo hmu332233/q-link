@@ -6,4 +6,5 @@ module.exports = {
     what: 'Q.Link란?',
     demo: '예시',
   },
+  demoUrl: '/links/6223a7b4584a605e6ddead7e',
 };

@@ -5,8 +5,6 @@ import { useTranslation } from 'next-i18next';
 import LoadableButton from 'components/LoadableButton';
 import Link from 'next/link';
 
-const demoUrl: string = process.env.NEXT_PUBLIC_DEMO_URL as string;
-
 function Index() {
   const { t } = useTranslation('main');
   return (
@@ -29,7 +27,7 @@ function Index() {
               <Link href="/intro">
                 <a className="btn flex-1 ml-3">{t('button.what')}</a>
               </Link>
-              <Link href={demoUrl} passHref>
+              <Link href={t('demoUrl')} passHref>
                 <LoadableButton className="btn-outline flex-1 ml-3">
                   {t('button.demo')}
                 </LoadableButton>

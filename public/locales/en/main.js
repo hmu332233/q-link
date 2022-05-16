@@ -5,4 +5,5 @@ module.exports = {
     what: `What's Q.Link?`,
     demo: 'Try Demo',
   },
+  demoUrl: '/links/62825d42dad9a9d8d439aa54',
 };
