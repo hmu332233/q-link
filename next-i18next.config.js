@@ -4,7 +4,7 @@ const path = require('path');
 // https://github.com/isaachinman/next-i18next#nextconfigjs
 module.exports = {
   i18n: {
-    defaultLocale: 'ko',
+    defaultLocale: 'en',
     locales: ['ko', 'en'],
     localePath: path.resolve('./public/locales'),
     localeExtension: 'js',
