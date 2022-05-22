@@ -2,8 +2,10 @@ import type { GetServerSideProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
-import LoadableButton from 'components/LoadableButton';
 import Link from 'next/link';
+
+import LoadableButton from 'components/LoadableButton';
+import LanguageSelector from 'components/LanguageSelector';
 
 function Index() {
   const { t } = useTranslation('main');
@@ -32,6 +34,9 @@ function Index() {
                   {t('button.demo')}
                 </LoadableButton>
               </Link>
+            </div>
+            <div className="flex justify-center w-full mt-4">
+              <LanguageSelector />
             </div>
           </div>
         </div>
