@@ -1,20 +1,37 @@
-## Q.Link
+<div align="center">
+  <a href="https://moon-svg.minung.dev">
+    <img src="https://user-images.githubusercontent.com/10302969/169694938-4da7a5e5-2207-4917-b020-6714ae224dc0.png" height="50" alt="moon svg logo" />
+  </a>
+  <br />
+  <p align="center">
+    Hide your link behind a simple quiz
+    <br />
+    <a href="https://q-link.minung.dev"><strong>Site »</strong></a>
+    <a href="https://q-link.minung.dev/links/62825d42dad9a9d8d439aa54"><strong>Demo »</strong></a>
+  </p>
+</div>
 
-퀴즈로 접근하는 링크, Q.Link  
-여러분의 링크를 간단한 퀴즈 뒤에 숨겨보세요!
+<br/><br/>
 
-링크: https://q-link.minung.dev  
-예시: https://q-link.minung.dev/links/6223a7b4584a605e6ddead7e
+## What's Q.Link?
 
-### Q.Link는 무엇인가요?
+"Hide your link behind a simple quiz" is the best expression for Q.Link.  
+It is a simple service that adds a quiz ahead the link so that users can access the link only when the answer is correct.  
+You can use it in many situations, including events, job offers, and mobile invitations.
 
-Q.Link란 퀴즈로 접근하는 링크라는 의미로
-링크 앞에 간단한 퀴즈를 추가하여 정답을 맞췄을 때만 링크에 접속 할 수 있도록 해주는 서비스입니다.
-이벤트, 구인 페이지, 모바일 청접장등 여러 상황에서 사용해볼 수 있습니다.
+## How to use?
 
-### 어떤 상황에서 사용하나요?
+On Page Create Q.Link, type the link you want to move, the quiz content, and the correct answer to create a Q.Link.  
+Only those who have answered correctly will be able to go to the link.
 
-보안적인 요소보다는 재미 요소에 중점을 두고 여러 상황에서 활용해볼 수 있습니다.
+## When to use?
 
-- 간단한 퀴즈를 맞춘 참가자들이 회사 지원 페이지를 들어올 수 있도록 하기
-- 생일을 알고 있는 사람만 모바일 초대장을 볼 수 있도록 하기
+You can use it in many situations, focusing on fun rather than security.
+
+- Allow only those who have taken simple quizzes to enter the company' jobs page
+- Allow only those who know your birthday to see your mobile invitation
+
+## Contributing
+
+Contributing is always welcome!  
+Thank you for Star, Issue, Pull Request, and more.
