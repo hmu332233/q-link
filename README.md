@@ -2,7 +2,7 @@
   <a href="https://moon-svg.minung.dev">
     <img src="https://user-images.githubusercontent.com/10302969/169694938-4da7a5e5-2207-4917-b020-6714ae224dc0.png" height="71" alt="moon svg logo" />
   </a>
-  <br /><br />
+  <br />
   <p align="center">
     Hide your link behind a simple quiz
     <br />
