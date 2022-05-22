@@ -12,6 +12,7 @@
 </div>
 
 <br/>
+<a href="https://www.producthunt.com/posts/q-link?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-q&#0045;link" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=347116&theme=light&period=daily" alt="Q&#0046;Link - Hide&#0032;your&#0032;link&#0032;behind&#0032;a&#0032;simple&#0032;quiz&#0046; | Product Hunt" style="width: 167px; height: 36px;" width="167" height="36" /></a>
 
 ## What's Q.Link?
 
