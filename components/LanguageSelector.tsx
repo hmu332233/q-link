@@ -13,6 +13,10 @@ const ITEMS = [
     locale: 'ko',
     text: '한국어',
   },
+  {
+    locale: 'ms',
+    text: 'Bahasa Melayu',
+  },
 ];
 
 type Props = {
