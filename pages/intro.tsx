@@ -29,7 +29,7 @@ export const getServerSideProps: GetServerSideProps = async ({
 }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'intro'])),
+      ...(await serverSideTranslations(locale, ['common', 'intro', 'links'])),
     },
   };
 };
