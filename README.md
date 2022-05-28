@@ -40,6 +40,8 @@ You can use it in many situations, focusing on fun rather than security.
 Contributing is always welcome!  
 Thank you for Star, Issue, Pull Request, and more.
 
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/minungHan)
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
