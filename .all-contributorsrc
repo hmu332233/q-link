@@ -1,0 +1,26 @@
+{
+  "projectName": "q-link",
+  "projectOwner": "hmu332233",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "hmu332233",
+      "name": "Minung Han",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10302969?v=4",
+      "profile": "https://github.com/hmu332233",
+      "contributions": [
+        "maintenance",
+        "code",
+        "translation"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
