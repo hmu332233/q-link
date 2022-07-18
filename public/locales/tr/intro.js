@@ -1,35 +1,35 @@
 module.exports = {
-  contents: `### What's Q.Link?
+  contents: `### Q.Link nedir?
 
-  "Hide your link behind a simple quiz" is the best expression for Q.Link.  
-  It is a simple service that adds a quiz ahead the link so that users can access the link only when the answer is correct. You can use it in many situations, including events, job offers, and mobile invitations.  
+  "Linkinizi basit bir sorunun arkasına gizleyin" Q.Link'in ne yaptığını en iyi anlatan ifadedir.
+  Linkinizin önüne bir soru ekleyerek ancak bu soruya doğru cevap verildiğinde linke erişmenize izin veren basit bir hizmettir. Etkinlikler, iş teklifleri ve mobil davetler dahil olmak üzere bir çok alanda kullanılabilir.
 
-  The project was inspired by [codecaptcha.io](https://codecaptcha.io).
+  Q.link [codecaptcha.io](https://codecaptcha.io) projesinden esinlenilerek ortaya çıkarılmıştır. 
 
-  ### How to use?
+  ### Nasıl kullanılır?
+  
+  [Q.link oluştur](/links/new) sayfasında göndermek istediğiniz linki yerleştirdikten sonra soru içeriğini ve doğru cevabı girerek bir Q.Link oluşturabilirsiniz.
+  Sadece doğru cevap verenler gerçek bağlantıya yönlendirileceklerdir. 
+  
+  ### Ne zaman kullanılır?
 
-  On Page [Create Q.Link](/links/new), type the link you want to move, the quiz content, and the correct answer to create a Q.Link.  
-  Only those who have answered correctly will be able to go to the link.
+  Güvenliğe değil de eğlenceye odaklanarak bir çok durumda kullanabilirsiniz.
 
-  ### When to use?
-
-  You can use it in many situations, focusing on fun rather than security.
-
-  - Allow only those who have taken simple quizzes to enter the company' jobs page
-  - Allow only those who know your birthday to see your mobile invitation
+  - Sadece basit bir testi geçenleri iş ilanı sayfanıza yönlendirin
+  - Mobil davetiyenizi yalnızca doğum gününüzü bilenlerin görmesine izin verin
 
   ---
 
-  ### Example
+  ### Örnek
 
-  The following is an example of the actual [Q.LINK](https://q-link.minung.dev). 😀😀  
-  Q.Link will help you take the quiz and help the person who answers correctly go to the link you have specified, as shown in the example.
+  Aşağıda gerçek bir [Q.LINK](https://q-link.minung.dev) örneği verilmiştir. 😀😀  
+  Q.Link teste katılmanıza ve doğru cevap veren kişinin örnekte gösterildiği gibi belirttiğiniz linke erişmesine yardımcı olacaktır.
 
   \`\`\`
-  Q. What will go into [?]?
+  Q. Soru işareti [?] yerine hangi harf gelmelidir?
 
   ABC[?]E
   \`\`\`
-  If you are correct, go to \`https://q-link.minung.dev\``,
+  Eğer cevabınız doğru ise \`https://q-link.minung.dev\`` linkine yönlendirilecekseniz, 
   correct: 'D',
 };
