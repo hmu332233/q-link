@@ -1,9 +1,9 @@
 module.exports = {
-  description: 'Hide your link behind a simple quiz.',
+  description: 'Bağlantınızı basit bir sorunun arkasına gizleyin.',
   button: {
-    create: 'Create Q.Link',
-    what: `What's Q.Link?`,
-    demo: 'Try Demo',
+    create: 'Q.Link Oluştur',
+    what: `Q.Link nedir?`,
+    demo: 'Demoyu Deneyin',
   },
   demoUrl: '/links/62825d42dad9a9d8d439aa54',
 };
