@@ -1,14 +1,14 @@
 module.exports = {
-  next: 'Next',
-  submit: 'Submit',
-  share: 'Share',
-  copied: 'The link has been copied!',
+  next: 'Sonraki',
+  submit: 'Gönder',
+  share: 'Paylaş',
+  copied: 'Link kopyalandı!',
   contents: {
-    answerPlaceholder: 'Enter the answer',
-    createLink: 'Create your Q.Link',
+    answerPlaceholder: 'Cevabı girin',
+    createLink: 'Q.link oluşturun',
   },
   seo: {
-    description: 'Hide your link behind a simple quiz.',
-    keywords: 'Q.Link,퀴즈 링크,링크,문제,Quiz Link,Link,Quiz',
+    description: 'Linkinizi basit bir sorunun arkasına gizleyin.',
+    keywords: 'Q.Link,Quiz Link,Link,Soru,Quiz Link,Link,Quiz',
   },
 };
