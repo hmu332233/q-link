@@ -1,21 +1,21 @@
 module.exports = {
   feedback: {
-    correct: 'Correct! Go to the link after 5 seconds.',
-    fail: 'Incorrect answer.',
+    correct: 'Doğru cevap! 5 saniye sonra bağlantıya yönlendirileceksiniz.',
+    fail: 'Yanlış cevap.',
   },
   steps: {
-    one: 'Enter Link',
-    two: 'Create Quiz',
-    three: 'Complete',
+    one: 'Link Girin',
+    two: 'Soru Oluşturun',
+    three: 'Tamamlandı',
   },
   stepBody: {
     step1: {
-      feedback1: `Enter a link to move when the answer is correct.<br />If you don't have a link to move, try using <4 className="link" href="https://celebration.minung.dev" target="_blank" rel="noreferrer">celebration.minung.dev</4>`,
+      feedback1: `Doğru cevap verildiğinde yönlendirilmesini istediğini linki girin.<br />Eğer linkiniz yoksa <4 className="link" href="https://celebration.minung.dev" target="_blank" rel="noreferrer">celebration.minung.dev</4>'i deneyin. `,
     },
     step2: {
-      feedback1: 'Enter the correct answer.',
-      feedback2: 'Enter the quiz. (Markdown support)',
-      example: `### Quiz Example\n\nMarkdown grammar is available.\n\n\`\`\`\n1 + 2 + 3 + 4 = ?\n\`\`\``,
+      feedback1: 'Doğru cevabı girin.',
+      feedback2: 'Soruyu girin. (Markdown desteği mevcut)',
+      example: `### Soru Örneği\n\nMarkdown dili kullanılabilir.\n\n\`\`\`\n1 + 2 + 3 + 4 = ?\n\`\`\``,
     },
   },
 };
