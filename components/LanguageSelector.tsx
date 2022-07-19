@@ -19,7 +19,7 @@ const ITEMS = [
   },
   {
     locale: 'tr',
-    text: 'Turkish',
+    text: 'Türkçe',
   },
 ];
 

@@ -1,5 +1,5 @@
 module.exports = {
-  description: 'Bağlantınızı basit bir sorunun arkasına gizleyin.',
+  description: 'Linkinizi basit bir sorunun arkasına gizleyin.',
   button: {
     create: 'Q.Link Oluştur',
     what: `Q.Link nedir?`,

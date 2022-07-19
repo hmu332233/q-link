@@ -10,7 +10,7 @@ module.exports = {
   },
   stepBody: {
     step1: {
-      feedback1: `Doğru cevap verildiğinde yönlendirilmesini istediğini linki girin.<br />Eğer linkiniz yoksa <4 className="link" href="https://celebration.minung.dev" target="_blank" rel="noreferrer">celebration.minung.dev</4>'i deneyin. `,
+      feedback1: `Doğru cevap verildiğinde yönlendirilmesini istediğiniz linki girin.<br />Eğer linkiniz yoksa <4 className="link" href="https://celebration.minung.dev" target="_blank" rel="noreferrer">celebration.minung.dev</4>'i deneyin. `,
     },
     step2: {
       feedback1: 'Doğru cevabı girin.',
