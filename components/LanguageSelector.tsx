@@ -17,6 +17,10 @@ const ITEMS = [
     locale: 'ms',
     text: 'Bahasa Melayu',
   },
+  {
+    locale: 'tr',
+    text: 'Turkish',
+  },
 ];
 
 type Props = {
