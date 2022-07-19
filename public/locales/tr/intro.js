@@ -30,6 +30,6 @@ module.exports = {
 
   ABC[?]E
   \`\`\`
-  Eğer cevabınız doğru ise \`https://q-link.minung.dev\`` linkine yönlendirilecekseniz, 
+  Eğer cevabınız doğru ise \`https://q-link.minung.dev\` linkine yönlendirilecekseniz`,
   correct: 'D',
 };
