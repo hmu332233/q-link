@@ -1,6 +1,6 @@
 module.exports = {
   feedback: {
-    correct: 'Correct! Go to the link after 5 seconds.',
+    correct: 'Correct! You will be redirected to link in 5 seconds.',
     fail: 'Incorrect answer.',
   },
   steps: {
