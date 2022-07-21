@@ -53,6 +53,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/hmu332233"><img src="https://avatars.githubusercontent.com/u/10302969?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Minung Han</b></sub></a><br /><a href="#maintenance-hmu332233" title="Maintenance">🚧</a> <a href="https://github.com/hmu332233/q-link/commits?author=hmu332233" title="Code">💻</a> <a href="#translation-hmu332233" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/leovoon"><img src="https://avatars.githubusercontent.com/u/16155802?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Leo Voon</b></sub></a><br /><a href="#translation-leovoon" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://flowcv.me/erolbicer"><img src="https://avatars.githubusercontent.com/u/33051763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Erol Bicer</b></sub></a><br /><a href="#translation-nucerl" title="Translation">🌍</a></td>
   </tr>
 </table>
 
