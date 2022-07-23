@@ -39,7 +39,7 @@ function LinkComplete() {
         {/* <button className="btn btn-wide" onClick={handleCopyClick}>
           {t('copy')}
         </button> */}
-        <ShareButton />
+        <ShareButton url={link as string} />
       </div>
     </div>
   );
