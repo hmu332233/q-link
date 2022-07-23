@@ -3,15 +3,15 @@ import { useTranslation } from 'next-i18next';
 import cn from 'classnames';
 
 type Props = {
+  url?: string;
   outline?: boolean;
 };
 
-function ShareButton({ outline }: Props) {
+function ShareButton({ outline, url = location.href }: Props) {
   const { t } = useTranslation();
 
   const handleClick = async () => {
     const isAvailable = typeof navigator.share !== 'undefined';
-    const url = location.href;
 
     if (isAvailable) {
       await navigator.share({
