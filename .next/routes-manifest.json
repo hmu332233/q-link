@@ -1,0 +1,81 @@
+{
+  "version": 3,
+  "pages404": true,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "locale": false,
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [
+    {
+      "page": "/links/[id]",
+      "regex": "^/links/([^/]+?)(?:/)?$",
+      "routeKeys": { "id": "id" },
+      "namedRegex": "^/links/(?<id>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/intro",
+      "regex": "^/intro(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/intro(?:/)?$"
+    },
+    {
+      "page": "/links/complete",
+      "regex": "^/links/complete(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/links/complete(?:/)?$"
+    },
+    {
+      "page": "/links/new",
+      "regex": "^/links/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/links/new(?:/)?$"
+    }
+  ],
+  "dataRoutes": [
+    {
+      "page": "/",
+      "dataRouteRegex": "^/_next/data/foi4PM9UZlCD8yfMjOKOq/index.json$"
+    },
+    {
+      "page": "/intro",
+      "dataRouteRegex": "^/_next/data/foi4PM9UZlCD8yfMjOKOq/intro.json$"
+    },
+    {
+      "page": "/links/complete",
+      "dataRouteRegex": "^/_next/data/foi4PM9UZlCD8yfMjOKOq/links/complete.json$"
+    },
+    {
+      "page": "/links/new",
+      "dataRouteRegex": "^/_next/data/foi4PM9UZlCD8yfMjOKOq/links/new.json$"
+    },
+    {
+      "page": "/links/[id]",
+      "routeKeys": { "id": "id" },
+      "dataRouteRegex": "^/_next/data/foi4PM9UZlCD8yfMjOKOq/links/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/foi4PM9UZlCD8yfMjOKOq/links/(?<id>[^/]+?)\\.json$"
+    }
+  ],
+  "i18n": {
+    "defaultLocale": "en",
+    "locales": ["en", "ko", "ms", "tr"],
+    "localePath": "/home/runner/work/q-link/q-link/public/locales",
+    "localeExtension": "js"
+  },
+  "rewrites": []
+}
