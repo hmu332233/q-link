@@ -7,10 +7,11 @@ type Props = {
   outline?: boolean;
 };
 
-function ShareButton({ outline, url = location.href }: Props) {
+function ShareButton({ outline, url }: Props) {
   const { t } = useTranslation();
 
   const handleClick = async () => {
+    url ??= location.href;
     const isAvailable = typeof navigator.share !== 'undefined';
 
     if (isAvailable) {
