@@ -4,8 +4,8 @@ module.exports = {
     fail: 'Incorrect answer.',
   },
   steps: {
-    one: 'Enter Link',
-    two: 'Create Quiz',
+    one: 'Answer / Link',
+    two: 'Contents',
     three: 'Complete',
   },
   stepBody: {

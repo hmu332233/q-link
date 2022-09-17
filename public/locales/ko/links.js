@@ -4,8 +4,8 @@ module.exports = {
     fail: '오답입니다.',
   },
   steps: {
-    one: '링크 입력',
-    two: '문제 생성',
+    one: '정답 / 링크',
+    two: '문제 내용',
     three: '완료',
   },
   stepBody: {
