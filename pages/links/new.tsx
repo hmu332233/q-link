@@ -8,7 +8,7 @@ import axios from 'axios';
 
 import Layout from 'components/Layout';
 import Steps from 'components/Steps';
-import StepBody from 'components/StepBody';
+import StepForm from 'components/StepForm';
 
 const LAST_STEP = 3;
 
@@ -49,13 +49,13 @@ function LinkNew() {
     setQuizLink(newQuizLink);
   };
 
-  const StepBodyComponent = StepBody[`Step${step}`];
+  const StepFormComponent = StepForm[`Step${step}`];
 
   return (
     <Layout fluid>
       <div className="flex flex-col items-center gap-y-4">
         <Steps step={step} />
-        <StepBodyComponent onNextClick={handleNextClick} />
+        <StepFormComponent onNextClick={handleNextClick} />
       </div>
     </Layout>
   );

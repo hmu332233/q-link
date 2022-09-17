@@ -128,9 +128,9 @@ function QuizForm({ onNextClick }: Props) {
   );
 }
 
-const StepBody: { [key: string]: (props: Props) => JSX.Element } = {
+const StepForm: { [key: string]: (props: Props) => JSX.Element } = {
   Step1: QuizForm,
   Step2: LinkForm,
 };
 
-export default StepBody;
+export default StepForm;
