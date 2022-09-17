@@ -36,7 +36,7 @@ function LinkForm({ onNextClick }: Props) {
     <div className="flex flex-col items-center w-full gap-y-4">
       <form className="w-full max-w-lg" id="step1" onSubmit={handleSubmit}>
         <DefaultInput
-          label="Correct Answer"
+          label="Quiz Answer"
           feedback={t('links:stepBody.step2.feedback1')}
           name="correct"
           placeholder=""
