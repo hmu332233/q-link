@@ -10,7 +10,7 @@ type Props = {
 
 function MarkdownView({ contents }: Props) {
   return (
-    <article className="prose w-full max-w-lg">
+    <article className="prose w-full">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{

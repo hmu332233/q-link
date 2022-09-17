@@ -52,7 +52,7 @@ function LinkNew() {
   const StepBodyComponent = StepBody[`Step${step}`];
 
   return (
-    <Layout>
+    <Layout fluid>
       <div className="flex flex-col items-center gap-y-4">
         <Steps step={step} />
         <StepBodyComponent onNextClick={handleNextClick} />
