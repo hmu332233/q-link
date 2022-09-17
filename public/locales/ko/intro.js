@@ -31,5 +31,5 @@ module.exports = {
   가나다[?]마
   \`\`\`
   정답을 맞췄을 경우에는 \`https://q-link.minung.dev\`로 이동합니다.`,
-  correct: 'D',
+  correct: '라',
 };
