@@ -107,7 +107,7 @@ function QuizForm({ onNextClick }: Props) {
             feedback={t('links:stepBody.step2.feedback2')}
           >
             <textarea
-              className="textarea w-full h-48 textarea-bordered"
+              className="textarea w-full h-52 lg:h-72 textarea-bordered"
               name="contents"
               placeholder=""
               value={value}
