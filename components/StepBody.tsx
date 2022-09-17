@@ -20,13 +20,14 @@ type Props = {
   }) => void;
 };
 
-function Step1Body({ onNextClick }: Props) {
+function LinkForm({ onNextClick }: Props) {
   const { t } = useTranslation();
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const { url } = Object.fromEntries(formData);
+    const { correct, url } = Object.fromEntries(formData);
     onNextClick({
+      correct: correct as string,
       url: url as string,
     });
   };
@@ -34,6 +35,13 @@ function Step1Body({ onNextClick }: Props) {
   return (
     <div className="flex flex-col items-center w-full gap-y-4">
       <form className="w-full max-w-lg" id="step1" onSubmit={handleSubmit}>
+        <DefaultInput
+          label="Correct Answer"
+          feedback={t('links:stepBody.step2.feedback1')}
+          name="correct"
+          placeholder=""
+          required
+        />
         <DefaultInput
           label="Link"
           feedback={
@@ -65,7 +73,7 @@ function Step1Body({ onNextClick }: Props) {
   );
 }
 
-function Step2Body({ onNextClick }: Props) {
+function QuizForm({ onNextClick }: Props) {
   const { t } = useTranslation();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -83,9 +91,8 @@ function Step2Body({ onNextClick }: Props) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const { correct, contents } = Object.fromEntries(formData);
+    const { contents } = Object.fromEntries(formData);
     onNextClick({
-      correct: correct as string,
       contents: contents as string,
     });
     setIsLoading(true);
@@ -95,13 +102,6 @@ function Step2Body({ onNextClick }: Props) {
     <div className="flex flex-col items-center w-full gap-y-4">
       <div className="flex flex-col lg:flex-row items-center lg:justify-center lg:items-start w-full gap-6 gap-y-4">
         <form className="w-full max-w-lg" id="step2" onSubmit={handleSubmit}>
-          <DefaultInput
-            label="Correct"
-            feedback={t('links:stepBody.step2.feedback1')}
-            name="correct"
-            placeholder=""
-            required
-          />
           <FormGroup
             label="Quiz Contents"
             feedback={t('links:stepBody.step2.feedback2')}
@@ -129,8 +129,8 @@ function Step2Body({ onNextClick }: Props) {
 }
 
 const StepBody: { [key: string]: (props: Props) => JSX.Element } = {
-  Step1: Step1Body,
-  Step2: Step2Body,
+  Step1: QuizForm,
+  Step2: LinkForm,
 };
 
 export default StepBody;

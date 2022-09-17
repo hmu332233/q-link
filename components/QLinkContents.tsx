@@ -42,7 +42,7 @@ function QLinkContents({ url, contents, correct }: Props) {
   return (
     <div className="flex flex-col items-center gap-y-4">
       <MarkdownView contents={contents} />
-      <form className="w-full max-w-lg" id="answer" onSubmit={handleSubmit}>
+      <form className="w-full" id="answer" onSubmit={handleSubmit}>
         <DefaultInput
           name="answer"
           placeholder={t('common:contents.answerPlaceholder')}

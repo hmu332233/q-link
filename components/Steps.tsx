@@ -4,12 +4,12 @@ import cn from 'classnames';
 
 const STEP_ITEMS = [
   {
-    id: 'link',
-    textId: 'steps.one',
-  },
-  {
     id: 'quiz',
     textId: 'steps.two',
+  },
+  {
+    id: 'link',
+    textId: 'steps.one',
   },
   {
     id: 'complete',
