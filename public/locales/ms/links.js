@@ -4,8 +4,8 @@ module.exports = {
     fail: 'Jawapan salah.',
   },
   steps: {
-    one: 'Masuk Link',
-    two: 'Buat Kuiz',
+    one: 'Answer / Link',
+    two: 'Contents',
     three: 'Kongsi',
   },
   stepBody: {

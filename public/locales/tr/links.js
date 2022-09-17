@@ -4,8 +4,8 @@ module.exports = {
     fail: 'Yanlış cevap.',
   },
   steps: {
-    one: 'Link Girin',
-    two: 'Soru Oluşturun',
+    one: 'Answer / Link',
+    two: 'Contents',
     three: 'Tamamlandı',
   },
   stepBody: {
