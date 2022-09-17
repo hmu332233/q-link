@@ -18,6 +18,14 @@ body {
   overflow-x: hidden;
 }
 
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow-x: hidden;
+}
+
 pre {
   background-color: unset !important;
   padding: 0 !important;
