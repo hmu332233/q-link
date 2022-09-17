@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import tomorrow from 'react-syntax-highlighter/dist/cjs/styles/prism/tomorrow';
+
 type Props = {
   contents: string;
 };
@@ -25,6 +26,7 @@ function MarkdownView({ contents }: Props) {
             const [, language] = /language-(\w+)/.exec(className || '') || [];
             return (
               <SyntaxHighlighter
+                // @ts-ignore
                 style={tomorrow}
                 language={language || 'text'}
                 PreTag="div"
