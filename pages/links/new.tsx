@@ -5,6 +5,8 @@ import type { GetServerSideProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import axios from 'axios';
+
+import Layout from 'components/Layout';
 import Steps from 'components/Steps';
 import StepBody from 'components/StepBody';
 
@@ -50,10 +52,12 @@ function LinkNew() {
   const StepBodyComponent = StepBody[`Step${step}`];
 
   return (
-    <div className="flex flex-col items-center gap-y-4">
-      <Steps step={step} />
-      <StepBodyComponent onNextClick={handleNextClick} />
-    </div>
+    <Layout>
+      <div className="flex flex-col items-center gap-y-4">
+        <Steps step={step} />
+        <StepBodyComponent onNextClick={handleNextClick} />
+      </div>
+    </Layout>
   );
 }
 

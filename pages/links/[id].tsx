@@ -5,6 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import axios from 'axios';
 
+import Layout from 'components/Layout';
 import QLinkContents from 'components/QLinkContents';
 
 type Props = {
@@ -16,12 +17,12 @@ type Props = {
 
 function LinkId({ id, url, contents, correct }: Props) {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Q.Link - {id}</title>
       </Head>
       <QLinkContents url={url} contents={contents} correct={correct} />
-    </>
+    </Layout>
   );
 }
 

@@ -5,7 +5,6 @@ import { useRouter } from 'next/router';
 
 import { appWithTranslation } from 'next-i18next';
 
-import Layout from 'components/Layout';
 import * as gtag from 'libs/gtag';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -21,12 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
 
-  const isRoot = router.pathname === '/';
-  return (
-    <Layout hideHeader={isRoot}>
-      <Component {...pageProps} />
-    </Layout>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default appWithTranslation(MyApp);

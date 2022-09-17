@@ -5,8 +5,8 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 
 type Props = {
-  children: JSX.Element;
-  hideHeader: boolean;
+  children: React.ReactNode;
+  hideHeader?: boolean;
 };
 
 function Layout({ children, hideHeader }: Props) {

@@ -1,11 +1,12 @@
+import { useState } from 'react';
 import type { GetServerSideProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
+import Layout from 'components/Layout';
 import Steps from 'components/Steps';
-import { useState } from 'react';
 import ShareButton from 'components/ShareButton';
 
 function LinkComplete() {
@@ -23,25 +24,27 @@ function LinkComplete() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-y-4">
-      <Steps step={3} />
-      <Link href={link as string} passHref>
-        <a className="link link-accent">{link}</a>
-      </Link>
-      <div className="indicator">
-        {copied && (
-          <span className="indicator-item">
-            <span className="badge badge-secondary animate-head-shake">
-              {t('copied')}
+    <Layout>
+      <div className="flex flex-col items-center gap-y-4">
+        <Steps step={3} />
+        <Link href={link as string} passHref>
+          <a className="link link-accent">{link}</a>
+        </Link>
+        <div className="indicator">
+          {copied && (
+            <span className="indicator-item">
+              <span className="badge badge-secondary animate-head-shake">
+                {t('copied')}
+              </span>
             </span>
-          </span>
-        )}
-        {/* <button className="btn btn-wide" onClick={handleCopyClick}>
+          )}
+          {/* <button className="btn btn-wide" onClick={handleCopyClick}>
           {t('copy')}
         </button> */}
-        <ShareButton url={link as string} />
+          <ShareButton url={link as string} />
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 }
 
