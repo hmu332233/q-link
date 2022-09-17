@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Label from 'components/Label';
+
 type Props = {
   label?: string;
   feedback?: React.ReactNode;
@@ -9,11 +11,7 @@ type Props = {
 function FormGroup({ children, label, feedback }: Props) {
   return (
     <div className="form-control">
-      {label && (
-        <label className="label">
-          <span className="label-text text-lg font-semibold">{label}</span>
-        </label>
-      )}
+      {label && <Label>{label}</Label>}
       {children}
       {feedback && (
         <label className="label">
