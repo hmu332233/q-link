@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
 
 import type { GetServerSideProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -9,6 +10,10 @@ import axios from 'axios';
 import Layout from 'components/Layout';
 import Steps from 'components/Steps';
 import StepForm from 'components/StepForm';
+
+const BlockEditor = dynamic(() => import('components/BlockEditor'), {
+  ssr: false,
+});
 
 const LAST_STEP = 3;
 
@@ -55,7 +60,8 @@ function LinkNew() {
     <Layout fluid>
       <div className="flex flex-col items-center gap-y-4">
         <Steps step={step} />
-        <StepFormComponent onNextClick={handleNextClick} />
+        {/* <StepFormComponent onNextClick={handleNextClick} /> */}
+        <BlockEditor />
       </div>
     </Layout>
   );

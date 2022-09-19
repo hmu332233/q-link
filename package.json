@@ -14,6 +14,9 @@
     "contributors:generate": "all-contributors generate"
   },
   "dependencies": {
+    "@editorjs/editorjs": "^2.25.0",
+    "@editorjs/header": "^2.6.2",
+    "@editorjs/list": "^1.7.0",
     "axios": "^0.27.2",
     "classnames": "^2.3.2",
     "firebase": "^9.10.0",
