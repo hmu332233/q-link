@@ -41,10 +41,12 @@ function LanguageSelector({ className }: Props) {
       >
         {ITEMS.map((item) => (
           <li key={item.locale}>
-            <Link href={router.asPath} locale={item.locale}>
-              <a className={cn(router.locale === item.locale && 'active')}>
-                {item.text}
-              </a>
+            <Link
+              href={router.asPath}
+              locale={item.locale}
+              className={cn(router.locale === item.locale && 'active')}
+            >
+              {item.text}
             </Link>
           </li>
         ))}
