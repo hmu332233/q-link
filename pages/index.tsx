@@ -18,21 +18,23 @@ function Index() {
             <div className="w-full">
               <h1 className="text-4xl font-bold text-base-content ">
                 <Link href="/">
-                  <a>
-                    <span className="text-primary">Q.</span>Link
-                  </a>
+                  <span className="text-primary">Q.</span>Link
                 </Link>
               </h1>
               <p className="py-6 whitespace-pre-line">{t('description')}</p>
-              <div className="flex w-full">
-                <Link href="/links/new">
-                  <a className="btn btn-primary flex-1">{t('button.create')}</a>
+              <div className="flex w-full gap-3">
+                <Link href="/links/new" className="btn btn-primary flex-1">
+                  {t('button.create')}
                 </Link>
-                <Link href="/intro">
-                  <a className="btn flex-1 ml-3">{t('button.what')}</a>
+                <Link href="/intro" className="btn flex-1">
+                  {t('button.what')}
                 </Link>
-                <Link href={t('demoUrl')} passHref>
-                  <LoadableButton className="btn-outline flex-1 ml-3">
+                <Link
+                  href={t('demoUrl')}
+                  passHref
+                  className="inline-flex flex-1"
+                >
+                  <LoadableButton className="btn-outline w-full">
                     {t('button.demo')}
                   </LoadableButton>
                 </Link>

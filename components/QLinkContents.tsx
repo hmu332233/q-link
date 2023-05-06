@@ -55,8 +55,8 @@ function QLinkContents({ url, contents, correct }: Props) {
         {t('common:submit')}
       </button>
       <ShareButton outline />
-      <Link href="/links/new">
-        <a className="link">{t('common:contents.createLink')}</a>
+      <Link href="/links/new" className="link">
+        {t('common:contents.createLink')}
       </Link>
     </div>
   );

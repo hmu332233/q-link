@@ -27,8 +27,8 @@ function LinkComplete() {
     <Layout>
       <div className="flex flex-col items-center gap-y-4">
         <Steps step={3} />
-        <Link href={link as string} passHref>
-          <a className="link link-accent">{link}</a>
+        <Link href={link as string} className="link link-accent">
+          {link}
         </Link>
         <div className="indicator">
           {copied && (
