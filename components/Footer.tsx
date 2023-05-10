@@ -5,7 +5,7 @@ function Footer() {
     <footer className="mt-16 border-t">
       <div className="container flex py-4 text-sm">
         <div className="">
-          © 2022{' '}
+          © {new Date().getFullYear()}{' '}
           <a
             className="link link-hover"
             href="https://github.com/hmu332233"
