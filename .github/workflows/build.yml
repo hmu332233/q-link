@@ -27,13 +27,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
 
-      - name: Cache node modules
-        uses: actions/cache@v2
-        with:
-          path: ./action/node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.os }}-yarn-
-
       - name: Install
         run: yarn
       # TODO: 수정된 내용이 없을 경우 빌드를 진행하지 않도록 수정 필요
