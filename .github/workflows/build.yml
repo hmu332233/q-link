@@ -6,7 +6,7 @@ name: Q.Link Build
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -14,46 +14,46 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [22.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Checkout main branch
-      uses: actions/checkout@v3
+      - name: Checkout main branch
+        uses: actions/checkout@v3
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
-        
-    - name: Cache node modules
-      uses: actions/cache@v2
-      with:
-        path: ./action/node_modules
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: ${{ runner.os }}-yarn-
-        
-    - name: Install
-      run: yarn
-# TODO: 수정된 내용이 없을 경우 빌드를 진행하지 않도록 수정 필요      
-#     - name: Cache build file
-#       uses: actions/cache@v2
-#       id: cache_dist
-#       with:
-#         path: .next
-#         key: ${{ runner.os }}-dist-${{ hashFiles('**/BUILD_ID') }}
-#         restore-keys: ${{ runner.os }}-dist-${{ hashFiles('**/BUILD_ID') }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
 
-    - name: Build
-      if: steps.cache_dist.outputs.cache-hit != 'true'
-      run: yarn build
-      env:
-        NEXT_PUBLIC_DEMO_URL: ${{ secrets.NEXT_PUBLIC_DEMO_URL }}
-        
-    - uses: EndBug/add-and-commit@v9
-      with:
-        add: '.next --force'
-        default_author: github_actions
-        pathspec_error_handling: exitImmediately
-        push: 'origin main:product --force'
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ./action/node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-yarn-
+
+      - name: Install
+        run: yarn
+      # TODO: 수정된 내용이 없을 경우 빌드를 진행하지 않도록 수정 필요
+      #     - name: Cache build file
+      #       uses: actions/cache@v2
+      #       id: cache_dist
+      #       with:
+      #         path: .next
+      #         key: ${{ runner.os }}-dist-${{ hashFiles('**/BUILD_ID') }}
+      #         restore-keys: ${{ runner.os }}-dist-${{ hashFiles('**/BUILD_ID') }}
+
+      - name: Build
+        if: steps.cache_dist.outputs.cache-hit != 'true'
+        run: yarn build
+        env:
+          NEXT_PUBLIC_DEMO_URL: ${{ secrets.NEXT_PUBLIC_DEMO_URL }}
+
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: '.next --force'
+          default_author: github_actions
+          pathspec_error_handling: exitImmediately
+          push: 'origin main:product --force'

@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import {Prism, SyntaxHighlighterProps} from 'react-syntax-highlighter';
 import tomorrow from 'react-syntax-highlighter/dist/cjs/styles/prism/tomorrow';
+
+const SyntaxHighlighter = (Prism as any) as React.FC<SyntaxHighlighterProps>;
 
 type Props = {
   contents: string;
