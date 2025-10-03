@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import { Analytics } from "@vercel/analytics/next"
 
 function Document() {
   return (
@@ -36,6 +37,7 @@ function Document() {
       <body>
         <Main />
         <NextScript />
+        <Analytics />
       </body>
     </Html>
   );
