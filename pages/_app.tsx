@@ -5,6 +5,8 @@ import { useRouter } from 'next/router';
 
 import { appWithTranslation } from 'next-i18next';
 
+import { Analytics } from "@vercel/analytics/next"
+
 import * as gtag from 'libs/gtag';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -20,7 +22,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
 
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
+  );
 }
 
 export default appWithTranslation(MyApp);
