@@ -3,9 +3,7 @@
   "projectOwner": "hmu332233",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "files": [
-    "README.md"
-  ],
+  "files": ["README.md"],
   "imageSize": 100,
   "commit": true,
   "commitConvention": "none",
@@ -15,40 +13,37 @@
       "name": "Minung Han",
       "avatar_url": "https://avatars.githubusercontent.com/u/10302969?v=4",
       "profile": "https://github.com/hmu332233",
-      "contributions": [
-        "maintenance",
-        "code",
-        "translation"
-      ]
+      "contributions": ["maintenance", "code", "translation"]
     },
     {
       "login": "leovoon",
       "name": "Leo Voon",
       "avatar_url": "https://avatars.githubusercontent.com/u/16155802?v=4",
       "profile": "https://github.com/leovoon",
-      "contributions": [
-        "translation"
-      ]
+      "contributions": ["translation"]
     },
     {
       "login": "nucerl",
       "name": "Erol Bicer",
       "avatar_url": "https://avatars.githubusercontent.com/u/33051763?v=4",
       "profile": "https://flowcv.me/erolbicer",
-      "contributions": [
-        "translation"
-      ]
+      "contributions": ["translation"]
     },
     {
       "login": "DevooKim",
       "name": "Kim Hyun Woo",
       "avatar_url": "https://avatars.githubusercontent.com/u/42219589?v=4",
       "profile": "https://velog.io/@devookim",
-      "contributions": [
-        "code",
-        "bug"
-      ]
+      "contributions": ["code", "bug"]
+    },
+    {
+      "login": "erbhuwan",
+      "name": "Bhuwan Acharya Upadhyaya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87654807?v=4",
+      "profile": "https://bhuwanacharyaupadhyaya.com.np/",
+      "contributions": ["code"]
     }
   ],
   "contributorsPerLine": 7
 }
+
