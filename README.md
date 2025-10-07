@@ -57,6 +57,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://flowcv.me/erolbicer"><img src="https://avatars.githubusercontent.com/u/33051763?v=4?s=100" width="100px;" alt="Erol Bicer"/><br /><sub><b>Erol Bicer</b></sub></a><br /><a href="#translation-nucerl" title="Translation">🌍</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://velog.io/@devookim"><img src="https://avatars.githubusercontent.com/u/42219589?v=4?s=100" width="100px;" alt="Kim Hyun Woo"/><br /><sub><b>Kim Hyun Woo</b></sub></a><br /><a href="https://github.com/hmu332233/q-link/commits?author=DevooKim" title="Code">💻</a> <a href="https://github.com/hmu332233/q-link/issues?q=author%3ADevooKim" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://bhuwanacharyaupadhyaya.com.np/"><img src="https://avatars.githubusercontent.com/u/87654807?v=4?s=100" width="100px;" alt="Bhuwan Acharya Upadhyaya"/><br /><sub><b>Bhuwan Acharya Upadhyaya</b></sub></a><br /><a href="https://github.com/hmu332233/q-link/commits?author=erbhuwan" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/printlndarling"><img src="https://avatars.githubusercontent.com/u/116906137?v=4?s=100" width="100px;" alt="繁星_逐梦"/><br /><sub><b>繁星_逐梦</b></sub></a><br /><a href="#translation-printlndarling" title="Translation">🌍</a></td>
     </tr>
   </tbody>
 </table>
