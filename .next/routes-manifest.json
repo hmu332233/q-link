@@ -1,0 +1,88 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "locale": false,
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [
+    {
+      "page": "/links/[id]",
+      "regex": "^/links/([^/]+?)(?:/)?$",
+      "routeKeys": { "nxtPid": "nxtPid" },
+      "namedRegex": "^/links/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/intro",
+      "regex": "^/intro(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/intro(?:/)?$"
+    },
+    {
+      "page": "/links/complete",
+      "regex": "^/links/complete(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/links/complete(?:/)?$"
+    },
+    {
+      "page": "/links/new",
+      "regex": "^/links/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/links/new(?:/)?$"
+    }
+  ],
+  "dataRoutes": [
+    {
+      "page": "/",
+      "dataRouteRegex": "^/_next/data/zPYu6aMrpuaGygJ7PwvYq/index.json$"
+    },
+    {
+      "page": "/intro",
+      "dataRouteRegex": "^/_next/data/zPYu6aMrpuaGygJ7PwvYq/intro.json$"
+    },
+    {
+      "page": "/links/complete",
+      "dataRouteRegex": "^/_next/data/zPYu6aMrpuaGygJ7PwvYq/links/complete.json$"
+    },
+    {
+      "page": "/links/new",
+      "dataRouteRegex": "^/_next/data/zPYu6aMrpuaGygJ7PwvYq/links/new.json$"
+    },
+    {
+      "page": "/links/[id]",
+      "routeKeys": { "nxtPid": "nxtPid" },
+      "dataRouteRegex": "^/_next/data/zPYu6aMrpuaGygJ7PwvYq/links/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/zPYu6aMrpuaGygJ7PwvYq/links/(?<nxtPid>[^/]+?)\\.json$"
+    }
+  ],
+  "i18n": {
+    "defaultLocale": "en",
+    "locales": ["en", "ko", "ms", "tr", "zh-CN"],
+    "localePath": "/home/runner/work/q-link/q-link/public/locales",
+    "localeExtension": "js"
+  },
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Url",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "contentTypeHeader": "text/x-component"
+  },
+  "rewrites": []
+}

@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "functions": {
+    "/": {},
+    "/intro": {},
+    "/links/[id]": {},
+    "/links/complete": {},
+    "/links/new": {}
+  }
+}
