@@ -50,12 +50,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://github.com/hmu332233"><img src="https://avatars.githubusercontent.com/u/10302969?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Minung Han</b></sub></a><br /><a href="#maintenance-hmu332233" title="Maintenance">🚧</a> <a href="https://github.com/hmu332233/q-link/commits?author=hmu332233" title="Code">💻</a> <a href="#translation-hmu332233" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://github.com/leovoon"><img src="https://avatars.githubusercontent.com/u/16155802?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Leo Voon</b></sub></a><br /><a href="#translation-leovoon" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://flowcv.me/erolbicer"><img src="https://avatars.githubusercontent.com/u/33051763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Erol Bicer</b></sub></a><br /><a href="#translation-nucerl" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://velog.io/@devookim"><img src="https://avatars.githubusercontent.com/u/42219589?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kim Hyun Woo</b></sub></a><br /><a href="https://github.com/hmu332233/q-link/commits?author=DevooKim" title="Code">💻</a> <a href="https://github.com/hmu332233/q-link/issues?q=author%3ADevooKim" title="Bug reports">🐛</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/hmu332233"><img src="https://avatars.githubusercontent.com/u/10302969?v=4?s=100" width="100px;" alt="Minung Han"/><br /><sub><b>Minung Han</b></sub></a><br /><a href="#maintenance-hmu332233" title="Maintenance">🚧</a> <a href="https://github.com/hmu332233/q-link/commits?author=hmu332233" title="Code">💻</a> <a href="#translation-hmu332233" title="Translation">🌍</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/leovoon"><img src="https://avatars.githubusercontent.com/u/16155802?v=4?s=100" width="100px;" alt="Leo Voon"/><br /><sub><b>Leo Voon</b></sub></a><br /><a href="#translation-leovoon" title="Translation">🌍</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://flowcv.me/erolbicer"><img src="https://avatars.githubusercontent.com/u/33051763?v=4?s=100" width="100px;" alt="Erol Bicer"/><br /><sub><b>Erol Bicer</b></sub></a><br /><a href="#translation-nucerl" title="Translation">🌍</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://velog.io/@devookim"><img src="https://avatars.githubusercontent.com/u/42219589?v=4?s=100" width="100px;" alt="Kim Hyun Woo"/><br /><sub><b>Kim Hyun Woo</b></sub></a><br /><a href="https://github.com/hmu332233/q-link/commits?author=DevooKim" title="Code">💻</a> <a href="https://github.com/hmu332233/q-link/issues?q=author%3ADevooKim" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://bhuwanacharyaupadhyaya.com.np/"><img src="https://avatars.githubusercontent.com/u/87654807?v=4?s=100" width="100px;" alt="Bhuwan Acharya Upadhyaya"/><br /><sub><b>Bhuwan Acharya Upadhyaya</b></sub></a><br /><a href="https://github.com/hmu332233/q-link/commits?author=erbhuwan" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/printlndarling"><img src="https://avatars.githubusercontent.com/u/116906137?v=4?s=100" width="100px;" alt="繁星_逐梦"/><br /><sub><b>繁星_逐梦</b></sub></a><br /><a href="#translation-printlndarling" title="Translation">🌍</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
