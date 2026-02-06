@@ -22,6 +22,15 @@ function LinkId({ id, url, contents, correct }: Props) {
         <title>Q.Link - {id}</title>
       </Head>
       <QLinkContents url={url} contents={contents} correct={correct} />
+      <div className="flex justify-center mt-8">
+        <ins
+          className="kakao_ad_area"
+          style={{ display: 'none' }}
+          data-ad-unit="DAN-rXXQPJTmNrjhYiub"
+          data-ad-width="320"
+          data-ad-height="480"
+        />
+      </div>
     </Layout>
   );
 }

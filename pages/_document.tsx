@@ -20,8 +20,7 @@ function Document() {
         />
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6860600459196688"
-          crossOrigin="anonymous"
+          src="https://t1.daumcdn.net/kas/static/ba.min.js"
         />
         <link
           rel="stylesheet"
