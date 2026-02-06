@@ -18,10 +18,6 @@ function Document() {
             `,
           }}
         />
-        <script
-          async
-          src="https://t1.daumcdn.net/kas/static/ba.min.js"
-        />
         <link
           rel="stylesheet"
           as="style"

@@ -7,6 +7,7 @@ import axios from 'axios';
 
 import Layout from 'components/Layout';
 import QLinkContents from 'components/QLinkContents';
+import KakaoAdFit from 'components/KakaoAdFit';
 
 type Props = {
   id: string;
@@ -23,13 +24,7 @@ function LinkId({ id, url, contents, correct }: Props) {
       </Head>
       <QLinkContents url={url} contents={contents} correct={correct} />
       <div className="flex justify-center mt-8">
-        <ins
-          className="kakao_ad_area"
-          style={{ display: 'none' }}
-          data-ad-unit="DAN-rXXQPJTmNrjhYiub"
-          data-ad-width="320"
-          data-ad-height="480"
-        />
+        <KakaoAdFit adUnit="DAN-hF8bfMz33MeuVpaa" width={320} height={480} />
       </div>
     </Layout>
   );
