@@ -10,30 +10,30 @@ function KakaoAdFit({ adUnit, width, height }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const ins = document.createElement('ins');
+    ins.className = 'kakao_ad_area';
+    ins.style.display = 'none';
+    ins.setAttribute('data-ad-unit', adUnit);
+    ins.setAttribute('data-ad-width', String(width));
+    ins.setAttribute('data-ad-height', String(height));
+
     const script = document.createElement('script');
-    script.src = 'https://t1.daumcdn.net/kas/static/ba.min.js';
+    script.type = 'text/javascript';
+    script.src = 'https://t1.kakaocdn.net/kas/static/ba.min.js';
     script.async = true;
-    containerRef.current?.appendChild(script);
+
+    container.appendChild(ins);
+    container.appendChild(script);
 
     return () => {
-      const container = containerRef.current;
-      if (container) {
-        container.innerHTML = '';
-      }
+      container.innerHTML = '';
     };
-  }, []);
+  }, [adUnit, width, height]);
 
-  return (
-    <div ref={containerRef}>
-      <ins
-        className="kakao_ad_area"
-        style={{ display: 'none' }}
-        data-ad-unit={adUnit}
-        data-ad-width={String(width)}
-        data-ad-height={String(height)}
-      />
-    </div>
-  );
+  return <div ref={containerRef} />;
 }
 
 export default KakaoAdFit;

@@ -24,7 +24,7 @@ function LinkId({ id, url, contents, correct }: Props) {
       </Head>
       <QLinkContents url={url} contents={contents} correct={correct} />
       <div className="flex justify-center mt-8">
-        <KakaoAdFit adUnit="DAN-hF8bfMz33MeuVpaa" width={320} height={480} />
+        <KakaoAdFit adUnit="DAN-Pq5AyOvOFZlvf0hd" width={250} height={250} />
       </div>
     </Layout>
   );
