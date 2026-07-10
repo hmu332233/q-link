@@ -1,0 +1,2 @@
+self.__PRERENDER_MANIFEST =
+  '{"version":4,"routes":{},"dynamicRoutes":{},"preview":{"previewModeId":"bcea0cd753f13d8548c8dd21684bdc05","previewModeSigningKey":"6db3c07f09219bdd3ce792a4200728224d0e62d8a14381c54125feed78be3272","previewModeEncryptionKey":"1b37e4e8d13a5ebada8d5ca180eea0130bb8f25654eb253f9478daeaeffdfdb7"},"notFoundRoutes":[]}';
