@@ -6,6 +6,11 @@ function Document() {
       <Head>
         <script
           async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6860600459196688"
+          crossOrigin="anonymous"
+        />
+        <script
+          async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_ID}`}
         />
         <script
